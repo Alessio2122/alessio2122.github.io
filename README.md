@@ -1,8 +1,3 @@
----
-layout: default
-title: Inicio
----
-
 # Alessio's page (La página de Alessio)
 
 **PÁGINA WEB EN DESARROLLO**
