@@ -1,4 +1,4 @@
-#**🏗️ PÁGINA WEB EN DESARROLLO 🏗️**
+**PÁGINA WEB EN DESARROLLO**
 
 
 ¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo).
