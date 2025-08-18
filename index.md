@@ -13,9 +13,9 @@ Algunas veces serán temas nuevos y otras, más información a partir de un víd
 
 ## Índice
 
-[Artículos](posts.md)<br>
-[Proyectos](proyects.md)<br>
-[Guías](guides.md)<br>
+[Artículos](posts/posts.md)<br>
+[Proyectos](poyects/proyects.md)<br>
+[Guías](guides/guides.md)<br>
 
 ## Últimos artículos
 
