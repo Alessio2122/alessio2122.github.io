@@ -3,18 +3,18 @@ layout: default
 title: Inicio
 ---
 
-# Alessio's page
+# 🏗️**PÁGINA WEB EN DESARROLLO**🏗️
 
-**PÁGINA WEB EN DESARROLLO**
+# Inicio
 
 ¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo).
-Aquí es donde iré subiendo artículos sobre Minecraft y demás. Todo complementando a mis vídeos en el canal de YouTube (<a href="{{ 'https://youtube.com/@alessio2122mc?si=wJpvai4JHd4zwPSo' | relative_url }}">Alessio2122</a>).
-Algunas veces serán temas nuevos y otras, más información a partir de un vídeo.
+Aquí es donde iré subiendo artículos sobre Minecraft y demás. Todo complementando a mis vídeos en el canal de YouTube (<a href="{{ 'https://youtube.com/@alessio2122mc?si=wJpvai4JHd4zwPSo' | relative_url }}">@Alessio2122MC</a>).
+Algunas veces serán temas nuevo, otras más información a partir de un vídeo...
 
 ## Índice
 
 [Artículos](posts/posts.md)<br>
-[Proyectos](poyects/proyects.md)<br>
+[Proyectos](proyects/proyects.md)<br>
 [Guías](guides/guides.md)<br>
 
 ## Últimos artículos
