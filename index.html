@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html lang="es">
+<script>
+  fetch('includes/header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+</script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Inicio | Alessio2122</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  
+      <!-- Header -->
+       <div id="header"></div>
+    
+    <main>
+      <h1 id="️página-web-en-desarrollo️">🏗️<strong>PÁGINA WEB EN DESARROLLO</strong>🏗️</h1>
+      <h1 id="inicio">Inicio</h1>
+
+      <p>¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo).
+      Aquí es donde iré subiendo artículos sobre Minecraft y demás. Todo complementando a mis vídeos en el canal de YouTube (<a href="https://youtube.com/@alessio2122mc?si=wJpvai4JHd4zwPSo">@Alessio2122MC</a>).
+      Algunas veces serán temas nuevo, otras más información a partir de un vídeo…</p>
+
+     <h2 id="índice">Índice</h2>
+
+      <p><a href="https://alessio2122.github.io/posts/posts.html">Artículos</a><br>
+      <a href="https://alessio2122.github.io/proyects/proyects.html">Proyectos</a><br>
+      <a href="https://alessio2122.github.io/guides/guides.html">Guías</a><br></p>
+
+      <h2 id="últimos-artículos">Últimos artículos</h2>
+
+      <p><a href="https://alessio2122.github.io/_Enlace%20del%20%C3%BAltimo%20art%C3%ADculo_"><em>Nombre del último artículo</em></a> <br>
+      <a href="https://alessio2122.github.io/_Enlace%20al%20pen%C3%BAltimo%20art%C3%ADculo_"><em>Nombre del penúltimo artículo</em></a><br>
+      <a href="https://alessio2122.github.io/_Enlace%20del%20antepen%C3%BAltimo%20art%C3%ADculo_"><em>Nombre del antepenúltimo artículo</em></a><br></p>
+
+      <h2 id="proyectos-actuales">Proyectos actuales</h2>
+
+      <p><a href="https://alessio2122.github.io/_Enlace%20del%20%C3%BAltimo%20proyecto_"><em>Nombre del último proyecto</em></a><br>
+      <a href="https://alessio2122.github.io/_Enlace%20al%20pen%C3%BAltimo%20proyecto_"><em>Nombre del penúltimo proyecto</em></a><br></p>
+
+    </main>
+    <footer>
+     <hr>
+     <p>Diseñado por Alessio2122 (2025/08/19 12:55)</p>
+    </footer>  
+  </body> 
+</html>
