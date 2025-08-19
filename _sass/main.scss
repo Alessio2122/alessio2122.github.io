@@ -28,8 +28,17 @@ a {
     }
 }
 
-logo{
-    width: 5px;
-    height: 5px;
-    margin-right: 10px;
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav img {
+  height: 40px;
+}
+
+nav strong {
+  font-size: 40px;
+  line-height: 40px;
 }
