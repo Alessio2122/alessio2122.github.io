@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #293b86;
+  --secondary-color: #296A86;
+  --text-color: #e9e9e9;
+  --bg-color: #1c1c1c;
+}
+
+html {
+  font-family: Tahoma, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    color: var(--text-color);
+    font-family: "Open Sans";
+}
+
+h1 {
+    border-bottom: 1px solid var(--text-color);
+}
+
+hr {
+    box-align: center;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid var(--text-color);
+}
+
+.footer {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.8em;
+    margin-top: 20px;
+    background-color: var(--bg-color);
+}
+
+body {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  /*display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto; */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  padding: 0px;
+}
+p {
+  color: var(--text-color);
+  font-size: 1em;
+  font-family: Lato, "Microsoft Sans Serif", sans-serif;
+}
+
+.texto-nav {
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
