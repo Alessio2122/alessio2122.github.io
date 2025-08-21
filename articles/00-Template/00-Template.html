@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <html lang="es">
+<script>
+  // Cargar el header
+  fetch('/includes/header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+    // Cargar el footer
+    fetch('/includes/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el footer:', error));
+</script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Inicio | Alessio2122</title>
+    <link rel="stylesheet" href="/includes/style.css">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="refresh" content="5">
+  </head>
+  <body>
+    <header>
+      <!-- Header -->
+      <div id="header"></div>
+    </header>
+    <main>
+      
+      <h1>Template
+
+    </main>
+    <footer>
+      <!-- Footer -->
+      <div id="footer"></div>
+    </footer>
+  </body> 
+</html>

@@ -2,14 +2,14 @@
   <html lang="es">
 <script>
   // Cargar el header
-  fetch('includes/header.html')
+  fetch('/includes/header.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
     })
     .catch(error => console.error('Error al cargar el header:', error));
     // Cargar el footer
-    fetch('includes/footer.html')
+    fetch('/includes/footer.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('footer').innerHTML = html;
@@ -19,7 +19,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Inicio | Alessio2122</title>
-    <link rel="stylesheet" href="includes/style.css">
+    <link rel="stylesheet" href="/includes/style.css">
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <meta http-equiv="Expires" content="0">
     <meta http-equiv="Pragma" content="no-cache">
@@ -45,99 +45,35 @@
       <!-- Sección "Últimos artículos"-->
       <h2>Últimos artículos</h2>
 
-      <div class="articles">
+      <div class="articles-cards">
         <!-- Artículo 00-->
-        <div class="article">
-          <div class="card-banner">
-            <img src="articles/00-Template/assets/banner-00.png" class="card-banner-image">
+        <div class="article-card">
+          <div class="article-card-banner">
+            <img src="/articles/00-Template/attachments/banner-00.png" class="article-card-banner-image">
           </div>
-          <div class="card-title">
+          <div class="article-card-title">
             <span>TEMPLATE LOREM IPSUM DOLOR</span>
           </div>
-          <div class="card-description">
+          <div class="article-card-description">
             <span>Ut tempus ipsum orci. Aenean condimentum feugiat turpis, sit amet placerat augue pharetra quis. Donec nec tincidunt leo, eu vulputate dolor. Duis ut dui in felis condimentum commodo ut ac diam. Morbi semper nunc eu nulla cursus, nec auctor augue pretium. Suspendisse id ipsum varius, rutrum velit iaculis, hendrerit enim. Cras mattis rhoncus viverra. Aliquam ultrices felis vel eros tristique convallis. Phasellus nulla orci, vulputate non justo in, placerat aliquet quam. Quisque purus tellus, fermentum ut lacus tristique, dictum dictum nisl. Mauris euismod fringilla urna a euismod. Vivamus dictum massa massa, ac vehicula orci pellentesque in. Donec id lectus imperdiet, ultrices urna at, dignissim ante.</span>
           </div>
-          <div class="card-footer">
+          <div class="article-card-footer">
             <span> Escrito por: Alessio212<br>
               Publicado: 2025/08/20 16:04</span> 
           </div>
         </div>
-        <!-- Artículo 00-->
-        <div class="article">
-          <div class="card-banner">
-            <img src="articles/00-Template/assets/banner-00.png" class="card-banner">
+        <!-- Artículo 01-->
+        <div class="article-card">
+          <div class="article-card-banner">
+            <img src="/articles/00-Template/attachments/banner-00.png" class="article-card-banner-image">
           </div>
-          <div class="card-title">
+          <div class="article-card-title">
             <span>TEMPLATE LOREM IPSUM DOLOR</span>
           </div>
-          <div class="card-description">
+          <div class="article-card-description">
             <span>Ut tempus ipsum orci. Aenean condimentum feugiat turpis, sit amet placerat augue pharetra quis. Donec nec tincidunt leo, eu vulputate dolor. Duis ut dui in felis condimentum commodo ut ac diam. Morbi semper nunc eu nulla cursus, nec auctor augue pretium. Suspendisse id ipsum varius, rutrum velit iaculis, hendrerit enim. Cras mattis rhoncus viverra. Aliquam ultrices felis vel eros tristique convallis. Phasellus nulla orci, vulputate non justo in, placerat aliquet quam. Quisque purus tellus, fermentum ut lacus tristique, dictum dictum nisl. Mauris euismod fringilla urna a euismod. Vivamus dictum massa massa, ac vehicula orci pellentesque in. Donec id lectus imperdiet, ultrices urna at, dignissim ante.</span>
           </div>
-          <div class="card-footer">
-            <span> Escrito por: Alessio212<br>
-              Publicado: 2025/08/20 16:04</span> 
-          </div>
-        </div>
-        <!-- Artículo 00-->
-        <div class="article">
-          <div class="card-banner">
-            <img src="articles/00-Template/assets/banner-00.png" class="card-banner">
-          </div>
-          <div class="card-title">
-            <span>TEMPLATE LOREM IPSUM DOLOR</span>
-          </div>
-          <div class="card-description">
-            <span>Ut tempus ipsum orci. Aenean condimentum feugiat turpis, sit amet placerat augue pharetra quis. Donec nec tincidunt leo, eu vulputate dolor. Duis ut dui in felis condimentum commodo ut ac diam. Morbi semper nunc eu nulla cursus, nec auctor augue pretium. Suspendisse id ipsum varius, rutrum velit iaculis, hendrerit enim. Cras mattis rhoncus viverra. Aliquam ultrices felis vel eros tristique convallis. Phasellus nulla orci, vulputate non justo in, placerat aliquet quam. Quisque purus tellus, fermentum ut lacus tristique, dictum dictum nisl. Mauris euismod fringilla urna a euismod. Vivamus dictum massa massa, ac vehicula orci pellentesque in. Donec id lectus imperdiet, ultrices urna at, dignissim ante.</span>
-          </div>
-          <div class="card-footer">
-            <span> Escrito por: Alessio212<br>
-              Publicado: 2025/08/20 16:04</span> 
-          </div>
-        </div>
-        <!-- Artículo 00-->
-        <div class="article">
-          <div class="card-banner">
-            <img src="articles/00-Template/assets/banner-00.png" class="card-banner">
-          </div>
-          <div class="card-title">
-            <span>TEMPLATE LOREM IPSUM DOLOR</span>
-          </div>
-          <div class="card-description">
-            <span>Ut tempus ipsum orci. Aenean condimentum feugiat turpis, sit amet placerat augue pharetra quis. Donec nec tincidunt leo, eu vulputate dolor. Duis ut dui in felis condimentum commodo ut ac diam. Morbi semper nunc eu nulla cursus, nec auctor augue pretium. Suspendisse id ipsum varius, rutrum velit iaculis, hendrerit enim. Cras mattis rhoncus viverra. Aliquam ultrices felis vel eros tristique convallis. Phasellus nulla orci, vulputate non justo in, placerat aliquet quam. Quisque purus tellus, fermentum ut lacus tristique, dictum dictum nisl. Mauris euismod fringilla urna a euismod. Vivamus dictum massa massa, ac vehicula orci pellentesque in. Donec id lectus imperdiet, ultrices urna at, dignissim ante.</span>
-          </div>
-          <div class="card-footer">
-            <span> Escrito por: Alessio212<br>
-              Publicado: 2025/08/20 16:04</span> 
-          </div>
-        </div>
-        <!-- Artículo 00-->
-        <div class="article">
-          <div class="card-banner">
-            <img src="articles/00-Template/assets/banner-00.png" class="card-banner">
-          </div>
-          <div class="card-title">
-            <span>TEMPLATE LOREM IPSUM DOLOR</span>
-          </div>
-          <div class="card-description">
-            <span>Ut tempus ipsum orci. Aenean condimentum feugiat turpis, sit amet placerat augue pharetra quis. Donec nec tincidunt leo, eu vulputate dolor. Duis ut dui in felis condimentum commodo ut ac diam. Morbi semper nunc eu nulla cursus, nec auctor augue pretium. Suspendisse id ipsum varius, rutrum velit iaculis, hendrerit enim. Cras mattis rhoncus viverra. Aliquam ultrices felis vel eros tristique convallis. Phasellus nulla orci, vulputate non justo in, placerat aliquet quam. Quisque purus tellus, fermentum ut lacus tristique, dictum dictum nisl. Mauris euismod fringilla urna a euismod. Vivamus dictum massa massa, ac vehicula orci pellentesque in. Donec id lectus imperdiet, ultrices urna at, dignissim ante.</span>
-          </div>
-          <div class="card-footer">
-            <span> Escrito por: Alessio212<br>
-              Publicado: 2025/08/20 16:04</span> 
-          </div>
-        </div>
-        <!-- Artículo 00-->
-        <div class="article">
-          <div class="card-banner">
-            <img src="articles/00-Template/assets/banner-00.png" class="card-banner">
-          </div>
-          <div class="card-title">
-            <span>TEMPLATE LOREM IPSUM DOLOR</span>
-          </div>
-          <div class="card-description">
-            <span>Ut tempus ipsum orci. Aenean condimentum feugiat turpis, sit amet placerat augue pharetra quis. Donec nec tincidunt leo, eu vulputate dolor. Duis ut dui in felis condimentum commodo ut ac diam. Morbi semper nunc eu nulla cursus, nec auctor augue pretium. Suspendisse id ipsum varius, rutrum velit iaculis, hendrerit enim. Cras mattis rhoncus viverra. Aliquam ultrices felis vel eros tristique convallis. Phasellus nulla orci, vulputate non justo in, placerat aliquet quam. Quisque purus tellus, fermentum ut lacus tristique, dictum dictum nisl. Mauris euismod fringilla urna a euismod. Vivamus dictum massa massa, ac vehicula orci pellentesque in. Donec id lectus imperdiet, ultrices urna at, dignissim ante.</span>
-          </div>
-          <div class="card-footer">
+          <div class="article-card-footer">
             <span> Escrito por: Alessio212<br>
               Publicado: 2025/08/20 16:04</span> 
           </div>
