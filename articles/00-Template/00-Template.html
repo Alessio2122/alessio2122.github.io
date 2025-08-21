@@ -8,17 +8,47 @@
       document.getElementById('header').innerHTML = html;
     })
     .catch(error => console.error('Error al cargar el header:', error));
-    // Cargar el footer
-    fetch('/includes/footer.html')
+
+  // Cargar el footer
+  fetch('/includes/footer.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('footer').innerHTML = html;
     })
     .catch(error => console.error('Error al cargar el footer:', error));
+
+  // Generar el índice de secciones
+  // Este script crea un índice de secciones basado en los encabezados del documento
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById('section-nav');
+    if (!nav) return;
+
+    // Capturamos encabezados y mapeamos a {texto, nivel, id}
+    const sections = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(sec => {
+      let id = sec.id || sec.textContent.trim().replace(/\s+/g, '-').toLowerCase();
+      sec.id = id;
+      return { text: sec.textContent, id, level: +sec.tagName[1] };
+    });
+    if (sections.length === 0) return;
+
+    let html = '';
+    let currentLevel = 1;
+    sections.forEach(({ text, id, level }) => {
+      while (currentLevel < level) { html += '<ul>'; currentLevel++; }
+      while (currentLevel > level) { html += '</ul>'; currentLevel--; }
+      html += `<li><a href="#${id}" class="section-nav-element">${text}</a></li>`;
+    });
+
+    while (currentLevel > 1) { html += '</ul>'; currentLevel--; }
+
+    nav.innerHTML = `<ul>${html}</ul>`;
+  });
+
+</script>
 </script>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Inicio | Alessio2122</title>
+    <title>Template (¡NO DEBERÍAS PODER VER ESTO!) | Alessio2122</title>
     <link rel="stylesheet" href="/includes/style.css">
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <meta http-equiv="Expires" content="0">
@@ -32,9 +62,63 @@
       <div id="header"></div>
     </header>
     <main>
-      
-      <h1>Template
+      <!--Banner-->
+      <div class="banner">
+        <img src="/articles/00-Template/attachments/banner-00.png" class="banner-image" width="100%">
+      </div>
 
+      <!--Letrero-->
+      <div class="sign-columns">
+        <div class="sign-column">
+        </div>
+        <div class="sign-column-center">
+          <span>Un letrero precioso que define el tipo de texto que estás por leer (por ahora un texto de prueba).</span>
+        </div>
+        <div class="sign-column">
+        </div>
+      </div>
+
+      <!--3 columnas-->
+      <div class="columns">
+        <!-- Columna izquierda - Autor -->
+        <div class="author">
+          <img src="/includes/logo.png" width="75" height="75">
+          <span>Escrito por: Alessio2122 <br> Publicado: 2025/08/21 12:20</span>
+        </div>
+
+        <!-- Columna central - Contenido -->
+        <div class="content">
+          <div>
+            <h1>H1</h1>
+            <h2>H2</h2>
+            <h3>H3</h3>
+            <h4>H4</h4>
+            <h5>H5</h5>
+            <h6>H6</h6>
+            <p>Texto normal.</p>
+            <p>Texto con <strong>negrita</strong>, <em>cursiva</em> y <u>subrayado</u>.</p>
+            <p>Texto con <a href="">enlace</a>.</p>
+            <p>Texto con <code>código</code>.</p>
+            <p>Texto con <mark>resaltado</mark>.</p>
+            <p>Texto con <small>texto pequeño</small>.</p>
+            <p>Texto con <del>texto tachado</del>.</p>
+            <p>Texto con <ins>texto insertado</ins>.</p>
+            <p>Texto con <sub>subíndice</sub> y <sup> superíndice</sup>.</p>
+            <p>Texto con <span style="color: red;">color rojo</span> y <span style="background-color: yellow;">fondo amarillo</span>.</p>
+            <p>Texto con <span style="font-size: 1.5em;">tamaño aumentado</span> y <span style="font-family: Arial;">fuente Arial</span>.</p>
+            <p>Texto con <span style="text-decoration: underline;">subrayado</span> y <span style="text-decoration: line-through;">tachado</span>.</p>
+            <p>Texto con <span style="font-weight: bold;">negrita</span> y <span style="font-style: italic;">cursiva</span>.</p>
+            <p>Texto con <span style="text-transform: uppercase;">mayúsculas</span> y <span style="text-transform: lowercase;">minúsculas</span>.</p>
+            <p>Texto con <span style="text-decoration: overline;">sobre línea</span> y <span style="text-decoration: blink;">parpadeo</span>.</p>
+            <p>Alessio2122 es un desarrollador apasionado por la programación y la tecnología. En su tiempo libre, disfruta de aprender nuevas tecnologías y compartir sus conocimientos con la comunidad. Escribe para sí, no para sus seguidores y trabaja duro para contentarse. Esperemos que no se muera de escribir porque hay madre aaaa que vien ekfnekdne de d ed ed ecjf evr re sb tsjb grj sbjgr b grb gr bgr hbig rhbi grh bhir bhg hb grhib ghri bhgr t grhib ghr bgr wbhigr whb grhw bhgr bhgi wbh ghb ghiwb hgr bhgr hbg rhib ghi bhipb hrw bghjbglhbglhjbghbgrkhbrkg jgrhhbrub grbrhueoggebgrhuegrebhughbgbhg bhg rbhgr bogr hbogr hbghuog hgrbhug rehbog rhb grh bgr bgu hub</p>
+          </div>
+        </div>
+
+        <!-- Columna derecha - Índice de secciones -->
+        <div>
+          <nav id="section-nav" class="section-nav"></nav>
+        </div>
+      </div>
     </main>
     <footer>
       <!-- Footer -->
