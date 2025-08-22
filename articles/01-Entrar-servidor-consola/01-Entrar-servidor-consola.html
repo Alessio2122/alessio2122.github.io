@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+  <html lang="es">
+<script>
+  // Cargar el header
+  fetch('/includes/header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+
+  // Cargar el footer
+  fetch('/includes/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el footer:', error));
+
+  // Generar el índice de secciones
+  // Este script crea un índice de secciones basado en los encabezados del documento
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById('section-nav');
+    if (!nav) return;
+
+    // Capturamos encabezados y mapeamos a {texto, nivel, id}
+    const sections = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(sec => {
+      let id = sec.id || sec.textContent.trim().replace(/\s+/g, '-').toLowerCase();
+      sec.id = id;
+      return { text: sec.textContent, id, level: +sec.tagName[1] };
+    });
+    if (sections.length === 0) return;
+
+    let html = '';
+    let currentLevel = 1;
+    sections.forEach(({ text, id, level }) => {
+      while (currentLevel < level) { html += '<ul>'; currentLevel++; }
+      while (currentLevel > level) { html += '</ul>'; currentLevel--; }
+      html += `<li><a href="#${id}" class="section-nav-element">${text}</a></li>`;
+    });
+
+    while (currentLevel > 1) { html += '</ul>'; currentLevel--; }
+
+    nav.innerHTML = `<ul>${html}</ul>`;
+  });
+
+</script>
+</script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Cómo entrar a un servidor de Minecraft desde consola | Alessio2122</title>
+
+    <link rel="stylesheet" href="/includes/style.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Last-Modified" content="0">
+
+    <!--Metadatos-->
+    <meta name="description" content="Dos métodos efectivos para entrar en tu servidor de Mincraft desde una consola." />
+    <meta name="author" content="Alessio2122" />
+    <meta name="date" content="22/08/2025" />
+
+  </head>
+  <body>
+    <header>
+      <!-- Header -->
+      <div id="header"></div>
+    </header>
+    <main>
+      <!--Banner-->
+      <div class="banner">
+        <img src="attachments/01-Banner.png" class="banner-image" width="100%">
+      </div>
+
+      <!--Letrero-->
+      <div class="sign-columns">
+        <div class="sign-column">
+        </div>
+        <div class="sign-column-center">
+          <span>Guías</span>
+        </div>
+        <div class="sign-column">
+        </div>
+      </div>
+
+      <!--3 columnas-->
+      <div class="columns">
+        <!-- Columna izquierda - Autor -->
+        <div class="author">
+          <img src="/includes/logo.png" width="75" height="75">
+          <span>Escrito por: Alessio2122 <br> Publicado: YYYY/MM/DD</span>
+        </div>
+
+        <!-- Columna central - Contenido -->
+        <div class="content">
+          <div>
+            <h1>Cómo entrar a un servidor de Minecraft desde consola</h1>
+            <span class="subtitle">2 metodos verificados en una consola Nintendo Switch</span>
+            <div class="callout">
+              <p><em><strong>Aviso</strong>: Alessio2122 no se hace responsable de lo que pueda ocurrir a tu consola si ejecutas mal los pasos. Sigue la guía a tu propio riesgo. Recomendamos leer el texto varias veces antes de ponerse a ello.</em></p>
+            </div>
+
+            <h2>Introducción</h2>
+            <p>Creo que todos sabemos el dolor de cabeza que es intentar entrar a un servidor de Minecraft desde cualquier consola. Para los que no lo sepan, las consolas tienen una versión de Minecraft Bedrock, que a diferencia de Minecraft Java o Minecraft Bedrock para ordenadores y dispositivos móviles, no nos permite añadir servidores que no sean los predeterminados, los aprobados por Mojang.</p>
+            <p>En está guía tenemos 2 de los mejores métodos que he encontrado para que podáis jugar con vuestros amigos sin perder la cabeza en el intento. Están ordenador por dificultad y mi criterio propio.</p>
+
+            <h2>Materiales necesarios</h2>
+            <ul>
+              <li>La consola que tengas.</li>
+              <li>El juego Minecraft oficial (con versiones falsas o no oficiales es muy probable que no funcione esta guía).</li>
+              <li>Conexión a internet (si tu consola necesita una subscripción, como la Switch o la PS, deberás tenerla).</li>
+              <li>Cuenta de Microsoft ya inciada en tu consola.</li>
+              <li>(Acceso a la configuración de tu consola para el método 2).</li>
+            </ul>
+
+            <h2>Método 1: Entrar al Realm de Bedrock Server Hub</h2>
+            <p>Este es el método más seguro ya que es un servidor intermediario que te permite entrar a tu servidor desde él. El problema es que tiene anuncios y estos molestan un poco.</p>
+
+            <h3>Paso 1: Añadir el Realm de Bedrock Server Hub</h3>
+            <p>Para entrar en Bedrock Server Hub, debes ir a "Jugar" y después a "Realms" debes añadir uno nuevo en "Unirse a un Realm" o "+ Añadir/Unirse al Realms", si ya tienes Realms, en el código debes poner <code>gMAHyBCCj9W-fNg</code> y finalmente pulsa "Unirse" y "Unirse" otra vez.</p>
+
+            <h3>Paso 2: Añadir el servidor dentro de Bedrock Server Hub</h3>
+            <p>Ahora tienes el Realms en tu lista. Pulsa en él y entra dándole a "Jugar". Puede ser que la primera vez aparezca un texto diciendo que tienes que descargar unos archivos. Por lo que he probado, debes descarharlos, porque sino, no podrás entrar.</p>
+            <p>Ya que estás dentro, la primera vez te preguntara de qué consola eres, debes elegir correctamente la tuya. En la parte derecha cuando entraste debe aparecer un NPC que tiene encima un texto como "Join any server", como este:</p>
+            <img src="attachments/01-NPC.png" width="300px"></img>
+            <p>Habla con él y aparecerá un menú, para añadir un servidor debes darle a "Add New Server" allí escribe la IP y el puerto (port), que deberías conocer, en cada uno de los campos. Cuando lo tengas, pulsa "Enviar". Finalmente, selecciona el servidor que acabas de añadir y... (oh, claro, anuncios...) cada vez que salga un anuncio, espera a que suene un sonido de experiencia y pulsa "Close and proceed" porque si no esperas volverá a salir el anuncio.</p>
+            <p>Ahora sí, ya estás en tu servidor.</p>
+
+            <h3>Opinión</h3>
+            <p>Es impresionante que solo usando un Realms gratis puedas entrar a cualquier servidor configurado para que puedan entrar jugadores de Bedrock. Hay tantos anuncios porque mantener un servidor en línea no es gratis. Este Realms ha sido creado por <a href="https://www.oniioncraft.com/">OniionCraft</a>.</p>
+
+            <h2>Método 2: Utilizar Bedrock Connect (cambiar las DNS)</h2>
+            <p>Un clásico, ¿no puedes hacer algo? cambias las DNS. Supongo que la gente que esté leyendo esto se habrá quedado con cara de poker, "¡¿QUÉ SON LAS DNS?!". Unos códigos que permiten a tu consola ir por servidores distintos a los que debería entrar. Por eso mismo, no es muy seguro, no sabemos por dónde podría pasar tu información, pero para la gente arriesgada, os lo explico:</p>
+            <h3>Paso 1: Cambiar las DNS de tu consola</h3>
+            <p>Cada consola tiene su sistema, pero estos son los pasos comunes en casi todas:</p>
+            <ul>
+              <li>Ve a la configuración de tu consola.</li>
+              <li>Busca la sección de internet o redes.</li>
+              <li>Encuentra tu Wi-Fi.</li>
+              <li>Encuentra algún botón de configurar esa Wi-Fi.</li>
+              <li>Cambia las DNS a manual y pon las siguientes DNS:</li>
+              <ul>
+                <li>DNS primario: <code>104.238.130.180</code> (en PlayStation son <code>45.55.68.52</code>).
+                <li>DNS secundario: <code>001.001.001.001</code>.
+              </ul>
+              <li>Guarda los cambios y entra al juego.</li>
+            </ul>
+
+            <h3>Paso 2: Añadir el servidor</h3>
+            <p>Vale, pues con las DNS cambiadas ve a "Jugar" y "Servidores". Entra en cualquiera de ellos, porque dentro de cada uno saldrá una interfaz como esta:</p>
+            <img src="attachments/01-Interfaz.png" width="600px"></img>
+            <p>Entra en "Manage Server List" y después en "Add Server". Ponle el nombre que quieras, la IP y el puerto (port),activa el selector de "Add to server list", pulsa "Enviar". Ya está el servidor en la lsita de Bedrock Connect, no de Minecraft.</p>
+            <p>Para entrar solo pulsa el servidor y... (¡no hay anuncios!) ya estás en tu servidor.</p>
+            <h3>Opinión</h3>
+            <p>Aunque lo de cambiar las DNS se haya hecho desde siempre, es muy interesante que puedas llegar a tu servidor con solo cambiar unos números.</p>
+            <p>Este servicio es mantenido por <a href="https://github.com/Pugmatt/BedrockConnect">Bedrock Connect</a>.</p>
+            <p>Bajo mi recomendación, deberías cambiar las DNS a automático cada vez que no juegues a esos servidores, simplemente por seguridad.</p>
+
+            <h2>Conclusión</h2>
+            <p>Hasta aquí esta guía, la gente que ha programado estos servicios nos han ayudado un montón, porque si Mojang no lo permite, seguro que hay gente que lo intenta, lo programa y se esfuerza, y se llega a conseguir eso que tanto queríamos, poder jugar con nuestros amigos en consola. Estos desarrolladores se merecen un aplauso.</p>
+            <p>Si has aprendido algo, hazmelo saber en los comentarios en mi canal de YouTube. Muchas gracias a los que estén leyendo esto y también a los <em>developers</em> que tanto ingenio tienen.</p>
+          </div>
+        </div>
+
+        <!-- Columna derecha - Índice de secciones -->
+        <div>
+          <nav id="section-nav" class="section-nav"></nav>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer -->
+      <div id="footer"></div>
+    </footer>
+  </body> 
+</html>

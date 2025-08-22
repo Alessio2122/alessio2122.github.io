@@ -147,6 +147,16 @@ a:hover {
   transform: translate3d(0, -2px, 0);
 }
 
+code {
+  font-family: monospace;
+  background-color: #000000;
+  color: var(--text-color);
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+
 .articles-cards {
   display: grid;
   /* grid template columns depends on the withh of the screen */
@@ -183,10 +193,11 @@ a:hover {
 } 
 
 .article-card-banner-image {
-    width: 13rem;
+    width: 20.3rem;
     align-content: center;
     background-color: #2D90F6;
-    border-radius: 20px;
+    mask-image: linear-gradient(var(--bg-color) 10%, transparent);
+    border-radius:5px;
   } 
 
 .article-card-title {
@@ -226,32 +237,28 @@ a:hover {
 .sign-column-center {
   border: 2px solid var(--text-color);
   padding: 0.5rem;
-  background-color: var(--bg-color);
+  background-color: transparent;
   transform: translate(0, -10px, 0);
-  background-color: var(--primary-color);
   transition: all 0.2s ease-in-out;
+  font-size: 0.9rem
 }
 
 .sign-column-center:hover {
   border: 2px solid var(--text-color);
   padding: 0.5rem;
-  background-color: var(--bg-color);
   background-color: var(--primary-color);
   transform: translate3d(0, -5px, 0);
 }
 
 .columns {
   display: grid;
-  grid-template-columns: min-content auto auto;
+  grid-template-columns: min-content 4fr 1.5fr;
   gap: 2rem;
-  justify-items: center;
+  justify-content: center;
 }
 
 .author {
     display: block;
-    position: sticky;
-    overflow: hidden;
-    top: 0;
     align-items: center;
     background-color: var(--bg-color);
     padding-top: 0.5rem;
@@ -291,6 +298,37 @@ a:hover {
     transition: all 0.2s ease-in-out;
     background-color: transparent;
 }
+
+.subtitle {
+    display: block;
+    font-size: 1.01rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-family: "Open Sans";
+    font-weight: 500;
+    transform: translate3d(0, -5px, 0);
+}
+
+
+.callout {
+    border-left: 4px solid var(--primary-color);
+    background-color: #293b8653;
+    padding: 0.5rem 1rem;
+    font-family: "Open Sans";
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.callout:hover {
+    border-left: 4px solid var(--primary-color);
+    background-color: #293b8653;
+    padding: 0.5rem 1rem;
+    font-family: "Open Sans";
+    border-radius: 1rem;
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+}
+
 
 footer {
     text-align: center;
