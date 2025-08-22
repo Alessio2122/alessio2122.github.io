@@ -258,13 +258,14 @@ code {
 }
 
 .author {
-    display: block;
+    display: flex;
     align-items: center;
     background-color: var(--bg-color);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-inline: 1rem;
     box-shadow: none;
+    margin:1rem
 }
 
 .section-nav {
