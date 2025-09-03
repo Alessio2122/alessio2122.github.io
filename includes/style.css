@@ -163,14 +163,11 @@ code {
 
 
 .articles-cards {
-  display: grid;
+  display: flex;
   /* grid template columns depends on the withh of the screen */
   /*grid-template-columns: repeat(2, 1fr);*/
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-  column-gap: 3.5rem;
-  row-gap: 0rem;
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: repeat(1fr 1fr); 
+  column-gap: 2.5rem;
 }
 
 .article-card {
@@ -184,6 +181,11 @@ code {
 
 .article-card:hover {
     transition: all 0.2s ease-in-out;
+}
+
+.article-card-banner {
+    width: 30rem;
+    mask-image: linear-gradient(var(--bg-color) 10%, transparent);
 }
 
 .article-card-title {
