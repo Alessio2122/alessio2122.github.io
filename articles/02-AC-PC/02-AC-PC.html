@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+  <html lang="es">
+<script>
+  // Cargar el header
+  fetch('/includes/header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+
+  // Cargar el footer
+  fetch('/includes/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el footer:', error));
+
+  // Generar el índice de secciones
+  // Este script crea un índice de secciones basado en los encabezados del documento
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById('section-nav');
+    if (!nav) return;
+
+    // Capturamos encabezados y mapeamos a {texto, nivel, id}
+    const sections = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(sec => {
+      let id = sec.id || sec.textContent.trim().replace(/\s+/g, '-').toLowerCase();
+      sec.id = id;
+      return { text: sec.textContent, id, level: +sec.tagName[1] };
+    });
+    if (sections.length === 0) return;
+
+    let html = '';
+    let currentLevel = 1;
+    sections.forEach(({ text, id, level }) => {
+      while (currentLevel < level) { html += '<ul>'; currentLevel++; }
+      while (currentLevel > level) { html += '</ul>'; currentLevel--; }
+      html += `<li><a href="#${id}" class="section-nav-element">${text}</a></li>`;
+    });
+
+    while (currentLevel > 1) { html += '</ul>'; currentLevel--; }
+
+    nav.innerHTML = `<ul>${html}</ul>`;
+  });
+
+</script>
+</script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Cómo emular Animal Crossing (Gamecube) en PC | Alessio2122</title>
+    <link rel="icon" type="image/x-icon" href="/includes/logo.png">
+
+    <link rel="stylesheet" href="/includes/style.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Last-Modified" content="0">
+
+    <!--Metadatos-->
+    <meta name="description" content="Emular Animal Crossing (Gamecube) en PC con gráficos HD" />
+    <meta name="author" content="Alessio2122" />
+    <meta name="date" content="" />
+
+  </head>
+  <body>
+    <header>
+      <!-- Header -->
+      <div id="header"></div>
+    </header>
+    <main>
+      <!--Banner-->
+      <div class="banner">
+        <img src="attachments/02-Banner.png" class="banner-image" width="100%">
+      </div>
+
+      <!--Letrero-->
+      <div class="sign-columns">
+        <div class="sign-column">
+        </div>
+        <div class="sign-column-center">
+          <span>Guía</span>
+        </div>
+        <div class="sign-column">
+        </div>
+      </div>
+
+      <!--3 columnas-->
+      <div class="columns">
+        <!-- Columna izquierda - Autor -->
+        <div class="author">
+          <img src="/includes/logo.png" width="75" height="75">
+          <br>
+          <span>Escrito por: Alessio2122 <br> Publicado: </span>
+        </div>
+
+        <!-- Columna central - Contenido -->
+        <div class="content">
+          <div>
+            <h1>Cómo emular Animal Crossing (Gamecube) en PC</h1>
+            <span class="subtitle">Diferentes versiones y gráficos remasterizados</span>
+
+            <div class="callout">
+              <p><em><strong>Aviso</strong>: Alessio2122 no se hace responsable de lo que pueda ocurrir a tu ordenador si ejecutas mal los pasos. Sigue la guía a tu propio riesgo. Recomendamos leer el texto varias veces antes de ponerse a ello.</em></p>
+            </div>
+
+            <h2>Introducción</h2>
+            <p>Seguro que si no vives debajo de una piedra conocerás de Animal Crossing, una saga de juegos que te permite vivir una segunda vida, al lado de animales y seres de lo más alucinantes. Decorando tu casa, llenando el museo o ganando la mayor cantidad de dinero posible.</p>
+            <p>Pues hoy te vengo a hablar sobre uno de los primeros juegos de esta saga de Nintendo, el Animal Crossing original de la consola Gamecube. Vamos a ver las distintas versiones de este juego y después pasaremos a emular este juego en tu propio ordenador.</p>
+
+            <h2>Historia de los primeros juegos de Animal Crossing</h2>
+            <p>Un ligero resumen, porque para ello, podría escribir otros artículos.</p>
+
+            <div class="timeline">
+              <div class="timeline-container">
+                <h3>Doubutsu no Mori - 2001</h3>
+                <p>Este fue el primer juego de Animal Crossing. Solo fue lanzado en Japón para la Nintendo 64 y según traducciones se llamaba "Animal Forest".</p>
+              </div>
+              <div class="timeline-container">
+                <h3>Doubutsu no Mori + - 2001</h3>
+                <p>Este también fue lanzado solo para Japón, pero para la consola Gamecube, este incluía algunas funciones más que la anterior versión.</p>
+              </div>
+              <div class="timeline-container">
+                <h3>Animal Crossing - 2002/2003</h3>
+                <p>Por fin se lanzó para Estados Unidos y Europa, incluía traducciones para los principales idiomas europeos, pero tenía casi las mismas cosas que Doubutsu no Mori +</p>
+              </div>
+              <div class="timeline-container">
+                <h3>Doubutsu no Mori e+ - 2003</h3>
+                <p>La versión definitiva del juego, solo fue lanzada para Japón. Incluía muchas más funciones, eventos, items...</p>
+              </div>
+              <div class="timeline-container">
+                <h3>Doubutsu no Mori iQue - 2003</h3>
+                <p>Sólo se lanzó en China para la consola Nintendo iQue. Es el mismo juego que se lanzó en Europa y Estados Unidos traducido al Chino.</p>
+              </div>
+
+              <p>Ahora que ya sabes la base de los juegos voy a explicarte cómo emularlos y te daré mis recomendaciones según tus preferencias.</p>
+
+              <h2>Juego 1: Emular Doubutsu no Mori (Nintendo 64)</h2>
+              <p>Si quieres probar la primera versión del juego, este es el juego que buscas.</p>
+              <p>Si recuerdas, el juego original estaba en japonés, así que, si no sabes el idioma, creo que no te enterarás de mucho (¿o no?).Sí, existen versiones creadas por fans que traducen el juego al inglés, y son alucinantes, así que voy a explicarlo para los dos juegos, el original en japonés y traducido al inglés.</p>
+
+              <h3>Paso 1: Descargar un emulador de Nintendo 64</h3>
+              <p>Por internet seguro que encuentras emuladores geniales, el que yo uso es Mupen64Next, dentro de RetroArch, que es como una librería gigante de emuladores.</p>
+              <p>Para descargar RetroArch ve a <a href="https://www.retroarch.com/?page=platforms">la página de descargas de RetroArch</a> y descarga la versión que tu quieras para el sistema que tengas. Si has elegido la versión de instalación debes instalarlo, RetroArch tiene instrucciones para ello.</p>
+              <p>Genial, ahora que ya tienes instalado RetroArch, utiliza tu ratón para navegar por las páginas, ve a "Cargar un núcleo" y después a "Descargar un núcleo", finalmente busca un emulador de Nintendo 64, hay dos, el que a mí me gusta es el Mupen64Next. Seleccionalo y descargalo. Ya tienes tu emulador.</p>
+
+              <h3>Paso 2: Descargar los juegos</h3>
+              <p>Para evitarme problemas de legalidad, debes buscarlos tú. Según mis búsquedas si pones "Doubutsu no Mori English Rom" sale un enlace a Web Archive que incluye dos juegos, el japonés y el inglés.</p>
+
+              <h3>Paso 3: Jugar</h3>
+              <p>Ahora que ya tienes el emulador y los juegos, ve a RetroArch y a "Cargar contenido" entra en la carpeta en la que hayas metido los juegos y selecciona uno de ellos. Elige el núcleo y ¡a jugar! Deberás ir probando los controles, a la vez que empiezas a jugar.</p>
+
+              <h3>Opinión</h3>
+              <p>Creo que si me dijeran de jugar a este juego, no diría que no, pero hay opciones mejores, como las que vamos a ver más adelante.</p>
+
+              <h2>Juegos 2, 3 y 4: Emular Doubutsu no Mori +, Animal Crossing y Doubutsu no Mori e+</h2>
+              <p>Ahora sí, estos son los 3 juegos que vas a poder ver con texturas remasterizadas.</p>
+
+              <h3>Paso 1: Descargar un emulador de Gamecube</h3>
+
+              <p>Seguro que piensas descargar uno de RetroArch, pues siento decirte que el único que hay va como una tortuga, por ello, tendrás que descargar <a href="https://es.dolphin-emu.org/download/?ref=btn">Dolphin</a>. Se descarga e instala como cualquier otra aplicación. Ahora ábrelo y ve a "Mandos" y "Mandos de Gamecube", allí en el puerto 1 de Gamecube pon "Mando de juego estandar" y pulsa "Configurar". Ponle los botones teclas y mandos que quieras.</p>
+
+              <h3>Paso 2: Descargar los juegos</h3>
+              
+              <p>Como ya dije antes, por cuestiones de legalidad, para Doubutsu no Mori + o Animal Crossing, como supongo que lo querrás en español, debes buscar algo como "Animal Crossing Gamecube Rom" y para Doubutsu no Mori e+ "Animal Forest e+ English Patch".</p>
+
+              <h3>Paso 3: Abrir los juegos</h3>
+
+              <p>En Dolphin ve a "Abrir" y ve a la carpeta en la que tengas los juegos, selecciona uno y a jugar. Pero espera, si va lento ve a "Gráficos" y en "General" pon el motor en Direct3D 11, después en "Mejoras" pon el suavizado de bordes en MSAAx2.</p>
+
+              <h3>Paso EXTRA: Añadir gráficos remasterizados</h3>
+
+              <p>Se ve un poco feo, ¿verdad?, para que se vea así:</p>
+
+              <img src="attachments/02-Resete.png" width="600">
+
+              <p>Debemos descargar texturas personalizadas, pero tranquilo, que es fácil:</p>
+
+              <h4>Paso 1: Descargar las texturas</h4>
+
+              <p>Puedes descargarlas desde aquí: <a href="https://forums.dolphin-emu.org/Thread-animal-crossing-hd-texture-pack-version-21-may-26th-2025">Dolphin Forums</a>.</p>
+
+              <h4>Paso 2: Meter las texturas en el juego</h4>
+
+              <p>Tendrás que meterlas en una carpeta específica: <code>C:\Users\<strong>TU USUARIO</strong>\AppData\Roaming\Dolphin Emulator\Load\Textures</code> puedes copiar esta ruta (cambiando el usuario) en la aplicación "Ejecutar" de Windows, que se abre con las teclas Windows + R. Copia el interior del .zip en esta carpeta. Si vas a jugar Doubutsu no Mori e+ (English Patch) tendrás que hacer una copia de la carpeta llamada "GAF" y llamarla "GAEE01".</p>
+
+              <h4>Paso 3: Jugar</h4>
+
+              <p>Ahora, cada vez que juegues a Animal Crossing tendrás las rexturas remasterizadas.</p>
+
+              <h3>Opinión</h3>
+
+              <p>Estos tres juegos son de los mejores Animal Crossing de su época, además de que si les añadimos texturas y mods a los juegos pueden volverse más interesantes de lo que son ya.</p>
+
+              <h2>Conclusión</h2>
+
+              <p>Animal Crossing es una de las mejores sagas de juegos de Nintendo de la historia, y como tal, tiene muchas versiones e historia. Yo recomiendo jugar a los primeros juegos, solo para ver la evolución entre los demás, además de que siempre tiene alguna cosa distinta o novedosa que las otras entregas pueden no tener.</p>
+
+              <p><em>"Alessio2122, no has puesto Doubutsu no Mori iQue."</em> Lo sé, no lo he puesto porque no he encontrado el emulador ni las roms. Además de que... ¡está en chino! y creo que si no sabes chino no te enterarás de una. Según lo que he investigado, tiene las mismas funciones y personajes que Doubutsu no Mori de la Nintendo 64. Y si aún quieres buscarlo, investiga y prueba, que así podrás hacer muchas cosas (pero ten cuidado con los virus, debes saber de dónde descargas las cosas).</p>
+
+              <h2>Créditos</h2>
+
+              <ul>
+                <li><a href="https://nookipedia.com/">Nookipedia</a>.</li>
+                <li><a href="https://discord.gg/HcpymVA">Animal Crossing Modding: Servidor de Discord</a>.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha - Índice de secciones -->
+        <div>
+          <nav id="section-nav" class="section-nav"></nav>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer -->
+      <div id="footer"></div>
+    </footer>
+  </body> 
+</html>

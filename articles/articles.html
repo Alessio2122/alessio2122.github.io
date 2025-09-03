@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <html lang="es">
+<script>
+  // Cargar el header
+  fetch('/includes/header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+    // Cargar el footer
+    fetch('/includes/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el footer:', error));
+</script>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Artículos | Alessio2122</title>
+    <link rel="icon" type="image/x-icon" href="/includes/logo.png">
+
+    <link rel="stylesheet" href="/includes/style.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Last-Modified" content="0">
+
+    <!--Metadatos-->
+    <meta name="description" content="Todos los artículos de Alessio2122, guías, noticias y demás están aquí, ordenados por fecha." />
+    <meta name="author" content="Alessio2122" />
+    <meta name="date" content="2025/08/22" />
+  </head>
+  <body>
+    <header>
+      <!-- Header -->
+      <div id="header"></div>
+    </header>
+    <main class="index">
+      <h1>Artículos</h1>
+      
+      <p>Pues aquí tienes todos mis artículos, guías, noticias y demás ordenados por fecha. Si encuentras algún problema, por favor déjalo en el <a href="https://github.com/Alessio2122/alessio2122.github.io/issues">apartado de errores del repositorio de GitHub de esta página web.</a></p>
+      <!--***********************************************************-->
+      <!-- Artículo 01-->
+      <a href="/articles/01-Entrar-servidor-consola/01-Entrar-servidor-consola.html">
+      <div class="articles-cards"> 
+        <div class="article-card">
+          <div class="article-card-banner">
+            <img src="/articles/01-Entrar-servidor-consola/attachments/01-Banner.png" class="article-card-banner-image">
+          </div>
+          <div class="article-card-title">
+            <span>Cómo entrar a un servidor de Minecraft desde consola</span>
+          </div>
+          <div class="article-card-description">
+            <span>Dos métodos efectivos para entrar en tu servidor de Mincraft desde una consola.</span>
+          </div>
+          <div class="article-card-footer">
+            <span> Escrito por: Alessio212<br>
+              Publicado: 22/08/2025</span> 
+          </div>
+        </div>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer -->
+      <div id="footer"></div>
+    </footer>
+  </body> 
+</html>
