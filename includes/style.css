@@ -8,9 +8,9 @@
 }
 
 html {
-  font-family: Tahoma, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-family: "Open Sans";
 }
 
 body {
@@ -184,7 +184,10 @@ code {
 }
 
 .article-card-banner {
-    width: 30rem;
+    max-width: 50%;
+    height: 50%;
+    aspect-ratio: 6 / 1;
+    object-fit: fill;
     mask-image: linear-gradient(var(--bg-color) 10%, transparent);
 }
 
@@ -214,7 +217,6 @@ code {
 
 .banner-image {
   mask-image: linear-gradient(var(--bg-color) 10%, transparent);
-  margin: 0rem;
 }
 
 .sign-columns {
@@ -254,6 +256,7 @@ code {
     padding-bottom: 0.5rem;
     padding-inline: 1rem;
     margin-right: 1rem;
+    font-size: 0.8em;
 }
 
 .section-nav {
