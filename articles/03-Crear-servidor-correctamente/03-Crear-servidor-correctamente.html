@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+  <html lang="es">
+<script>
+  // Cargar el header
+  fetch('/includes/header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+
+  // Cargar el footer
+  fetch('/includes/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el footer:', error));
+
+  // Generar el índice de secciones
+  // Este script crea un índice de secciones basado en los encabezados del documento
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById('section-nav');
+    if (!nav) return;
+
+    // Capturamos encabezados y mapeamos a {texto, nivel, id}
+    const sections = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(sec => {
+      let id = sec.id || sec.textContent.trim().replace(/\s+/g, '-').toLowerCase();
+      sec.id = id;
+      return { text: sec.textContent, id, level: +sec.tagName[1] };
+    });
+    if (sections.length === 0) return;
+
+    let html = '';
+    let currentLevel = 1;
+    sections.forEach(({ text, id, level }) => {
+      while (currentLevel < level) { html += '<ul>'; currentLevel++; }
+      while (currentLevel > level) { html += '</ul>'; currentLevel--; }
+      html += `<li><a href="#${id}" class="section-nav-element">${text}</a></li>`;
+    });
+
+    while (currentLevel > 1) { html += '</ul>'; currentLevel--; }
+
+    nav.innerHTML = `<ul>${html}</ul>`;
+  });
+
+</script>
+</script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Cómo crear un servidor de Minecraft correctamente + consejos para que no se acabe en tres días | Alessio2122</title>
+    <link rel="icon" type="image/x-icon" href="/includes/logo.png">
+
+    <link rel="stylesheet" href="/includes/style.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Metadatos-->
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="date" content="" />
+
+  </head>
+  <body>
+    <header>
+      <!-- Header -->
+      <div id="header"></div>
+    </header>
+    <main>
+      <!--Banner-->
+      <div class="banner">
+        <img src="/articles/00-Template/attachments/00-Banner.png" class="banner-image" width="100%">
+      </div>
+
+      <!--Letrero-->
+      <div class="sign-columns">
+        <div class="sign-column">
+        </div>
+        <div class="sign-column-center">
+          <span>Guías</span>
+        </div>
+        <div class="sign-column">
+        </div>
+      </div>
+
+      <!--3 columnas-->
+      <div class="columns">
+        <!-- Columna izquierda - Autor -->
+        <div class="author">
+          <img src="/includes/logo.png" width="75" height="75"  class="author-img">
+          <br>
+          <span>Escrito por: Alessio2122 <br> Publicado: </span>
+        </div>
+
+        <!-- Columna central - Contenido -->
+        <div class="content">
+          <div>
+            <h1>Cómo crear un servidor de Minecraft correctamente + consejos para que no se acabe en tres días</h1>
+            <span class="subtitle">Varias ideas probadas (y no probadas) por el autor</span>
+            <h2>Introducción</h2>
+            <p>Ya he hablado en otras ocasiones de los <a href="/articles/01-Entrar-servidor-consola/01-Entrar-servidor-consola.html">servidores de Minecraft en Bedrock y cómo conectarse desde consola</a> porque es realmente difícil si no conoces cómo. Esta vez quiero hablar sobre cómo crear un servidor de Minecraft (Java o Bedrock o ¡las dos a la vez!) con simplemente una página web (o unas cuantas).</p>
+            <p>Lo primero que quiero destacar es que como no pagas dinero en los hosteadores gratis, la gente gana de los anuncios, así que te recomiendo que te pongas un bloqueador de anuncios. Aunque hay gente que quiere comer de verdad así que no te dejan usar la página con bloqueador así que... queda en tu decisión usarlo dependiendo de la situación y lo que tú necesites y quieras.</p>
+            <p>Lo siguiente es que tú puedes crear tu servidor como quieras, pero estas son unas directrices generales que puedes usar o no, es tu decisión (¿por qué digo tanto esto?).</p>
+            <p>Finalmente, espero que aprendas algo interesante aquí así que comencemos:</p>
+
+            <h2>Paso 1. Crear el servidor</h2>
+            <p>Está claro que si no tienes servidor no hay juego, así que ya tenemos lo principal. Debes buscar un lugar donde puedas hostear tu servidor, puede ser gratis o pagando.</p>
+            <p><i>Espera, espera, espera... ¡¿HOSTEAR?!</i> Sí, es un término extraño, y se define como:</p>
+            <h3 style="color:var(--primary-color)">hostear¹</h3>
+            <p>Del ing. <i>host.</i></p>
+            <ol>
+                <li style="color: #9b9b9b55"><span style="color: #9b9b9b55">tr. En streaming (como en Twitch)...</span></li>
+                <li>tr. En videojuegos, crear o ser el servidor principal de una partida en la que se conectan otros jugadores.</li>
+            </ol>
+            <p>Así que básicamente es el ordenador que soporta tu mundo de Minecraft, las acciones de las personas, mobs, mecanismos...</p>
+          </div>
+        </div>
+
+        <!-- Columna derecha - Índice de secciones -->
+        <div>
+          <nav id="section-nav" class="section-nav"></nav>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer -->
+      <div id="footer"></div>
+    </footer>
+  </body> 
+</html>

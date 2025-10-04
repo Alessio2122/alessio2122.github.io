@@ -172,7 +172,6 @@ code {
 
 .article-card {
     color: var(--text-color);
-    width: 100%;
     border : 1px solid var(--text-color);
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -211,7 +210,8 @@ code {
   color: var(--text-color);
   font-family: "Open Sans";
   align-self: flex-end;
-  text-align: right;
+  align-items: flex-end;
+  justify-self: flex-end;
 }
 
 
@@ -309,17 +309,6 @@ code {
     padding: 0.5rem 1rem;
     font-family: "Open Sans";
     border-radius: 1rem;
-    transition: all 0.2s ease-in-out;
-}
-
-.callout:hover {
-    border-left: 4px solid var(--primary-color);
-    background-color: #293b8653;
-    padding: 0.5rem 1rem;
-    font-family: "Open Sans";
-    border-radius: 1rem;
-    transform: translate3d(0, -2px, 0);
-    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
 }
 
 
@@ -357,25 +346,85 @@ footer {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 934px) {
 
   nav {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: var(--primary-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-inline: 1rem;
   }
 
-  .div-nav,
-  .item-nav,
-  .item-nav-texto {
+  .div-nav {
     flex-direction: column;
     align-items: flex-start;
     margin: 0;
+    justify-content: flex-start;
   }
 
   .texto-nav {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
+  .item-nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item-nav:not(:last-child) {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5em;
+}
+
+.item-nav-texto {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5em;
+}
+
+.texto-nav {
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: #425394;
+  border-radius: 10px;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:active {
+    color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
 
   .articles-cards {
     display: flex;
@@ -451,8 +500,7 @@ a:hover {
 }
 .license {
     text-align: center;
-    font-size: 0.5em;
-    margin-top: 20px;
+    font-size: 0.65em;
     font-family: "Open Sans";
     color: var(--text-color);
     text-decoration: none;
