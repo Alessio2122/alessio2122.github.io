@@ -176,6 +176,11 @@ code {
     padding: 0.8rem;
     margin-bottom: 1rem;
     transition: all 0.2s ease-in-out;
+    background: -webkit-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:     -ms-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:    -moz-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:      -o-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:         linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
 }
 
 .article-card:hover {

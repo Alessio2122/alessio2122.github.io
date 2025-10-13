@@ -2,7 +2,7 @@
   <html lang="es">
 <script>
   // Cargar el header
-  fetch('/includes/header.html')
+  fetch('/others/VoltageCraft/includes/header-VoltageCraft.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
@@ -19,10 +19,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>VoltageCraft | Alessio2122</title>
-    <link rel="icon" type="image/x-icon" href="includes/Logo-VoltageCraft.png">
+    <title>Inicio | VoltageCraft</title>
+    <link rel="icon" type="image/x-icon" href="includes/VoltageCraft-Logo.png">
 
-    <link rel="stylesheet" href="/includes/style.css">
+    <link rel="stylesheet" href="/others/VoltageCraft/includes/style-VoltageCraft.css">
     
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <meta http-equiv="Expires" content="0">
@@ -31,10 +31,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Metadatos-->
-    <meta name="description" content="El índice oficial de VoltagecCraft, el servidor de Minecraft." />
+    <meta name="description" content="El índice oficial de VoltageCraft, el servidor de Minecraft." />
     <meta name="author" content="" />
     <meta name="date" content="11/10/2025" />
   </head>
+  <header>
+    <div id="header"></div>
+  </header>
   <body>
     <main class="index">
       <h1>Inicio</h1>
@@ -49,9 +52,8 @@
       <h2>Últimos artículos</h2>
       <div class="articles-cards">
         <!--Artículo 01-->
-        <a href="Normas/Normas.html">
+        <a href="01-Normas/01-Normas.html">
         <div class="article-card">
-          <img src="Normas/attachments/Normas-Banner.png" class="article-card-banner">
           <div class="article-card-title">
             <span>Normas oficiales de VoltageCraft</span>
           </div>
@@ -59,9 +61,52 @@
             <span>Estas son las normas oficiales del servidor de Minecraft VoltageCraft.</span>
           </div>
           <div class="article-card-footer">
-            <span> Escrito por: Alessio2122, Pikaminecraft (Pikaminecraft8), Picachu799, leovalolila (leovalolila0), kamikaze9709 y Charlyzgz15 (Minieizan, pro gamer)<br>
-              Publicado: 27/09/2025</span> 
-          </div></a>
+            <span>Publicado: 27/09/2025</span> 
+          </div>
+        </div>
+        </a>
+        <!--Artículo 02-->
+        <a href="02-Renombrar-items/02-Renombrar-items.html">
+        <div class="article-card">
+          <div class="article-card-title">
+            <span>Tabla de renombramientos de items</span>
+          </div>
+          <div class="article-card-description">
+            <span>La tabla de los renombramientos de items compatibles con nuestro paquete de texturas.</span>
+          </div>
+          <div class="article-card-footer">
+            <span>Publicado: 13/10/2025</span> 
+          </div>
+        </div>
+        </a>
+        <!--Artículo 03-->
+        <a href="03-Discos/03-Discos.html">
+        <div class="article-card">
+          <div class="article-card-title">
+            <span>Tabla de equivalencias de discos</span>
+          </div>
+          <div class="article-card-description">
+            <span>Los cambios que hemos hecho a los discos utilizando nuestro paquete de texturas.</span>
+          </div>
+          <div class="article-card-footer">
+            <span>Publicado: 13/10/2025</span> 
+          </div>
+        </div>
+        </a>
+        <!--Artículo 04-->
+        <a href="04-Paquete-texturas/VoltageCraft resource pack.zip">
+        <div class="article-card">
+          <div class="article-card-title">
+            <span>Paquete de texturas de VoltageCraft</span>
+          </div>
+          <div class="article-card-description">
+            <span>Si hubiera algún problema, puedes descargarlo desde aquí.</span>
+          </div>
+          <div class="article-card-footer">
+            <span>Publicado: 13/10/2025</span> 
+          </div>
+        </div>
+        </a>
         </div>
       </div>
     </main>

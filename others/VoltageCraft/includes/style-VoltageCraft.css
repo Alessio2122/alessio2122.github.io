@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --primary-color: #051d40;
+  --secondary-color: #707eb5;
+  --text-color: #e9e9e9;
+  --bg-color: #1c1c1c;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Open Sans";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 0rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: var(--primary-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.div-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item-nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item-nav:not(:last-child) {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5em;
+}
+
+.item-nav-texto {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5em;
+}
+
+.texto-nav {
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: #ffffff39;
+  border-radius: 10px;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:active {
+    color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.index {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    color: var(--text-color);
+    font-family: "Open Sans";
+    font-weight: 650;
+}
+
+hr {
+    box-align: center;
+    width: 84%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid var(--text-color);
+}
+
+main {
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+  font-size: 1em;
+  font-family: "Open Sans";
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+
+a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  transform: translate3d(0, -2px, 0);
+}
+
+code {
+  font-family: monospace;
+  background-color: #000000;
+  color: var(--text-color);
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+
+.articles-cards {
+  display: inline-flex;
+  /* grid template columns depends on the withh of the screen */
+  /*grid-template-columns: repeat(2, 1fr);*/
+  grid-template-columns: repeat(1fr); 
+  column-gap: 2.5rem;
+}
+
+.article-card {
+    color: var(--text-color);
+    border : 1px solid var(--text-color);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease-in-out;
+    background: -webkit-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:     -ms-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:    -moz-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:      -o-linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+    background:         linear-gradient(180deg, var(--primary-color) 40%, var(--bg-color) 60%);
+}
+
+.article-card:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.article-card-banner {
+    max-width: 50%;
+    height: 50%;
+    aspect-ratio: 6 / 1;
+    object-fit: fill;
+    mask-image: linear-gradient(var(--bg-color) 10%, transparent);
+}
+
+.article-card-title {
+    font-size: 1.1rem;
+    font-weight: 650;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+    font-family: "Open Sans";
+}
+
+.article-card-description {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans";
+}
+
+.article-card-footer {
+  font-size: 0.7rem;
+  color: var(--text-color);
+  font-family: "Open Sans";
+  align-self: flex-end;
+  align-items: flex-end;
+  justify-self: flex-end;
+}
+
+
+.banner-image {
+  mask-image: linear-gradient(var(--bg-color) 10%, transparent);
+}
+
+.sign-columns {
+  display: grid;
+  grid-template-columns: auto max-content auto;
+  justify-items: center;
+}
+
+.sign-column-center {
+  border: 2px solid var(--text-color);
+  padding: 0.5rem;
+  background-color: transparent;
+  transform: translate(0, -10px, 0);
+  transition: all 0.2s ease-in-out;
+  font-size: 0.9rem
+}
+
+.sign-column-center:hover {
+  border: 2px solid var(--text-color);
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  transform: translate3d(0, -5px, 0);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 0.6fr 4fr 1.2fr;
+  gap: 0rem;
+  justify-content: center;
+}
+
+.author {
+    display: block;
+    text-align: center;
+    background-color: var(--bg-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-inline: 1rem;
+    margin-right: 1rem;
+    font-size: 0.8em;
+}
+
+.section-nav {
+    display: flex;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0rem;
+    border-left: #e9e9e925 1px solid;
+    box-shadow: none;
+    margin-left: 1rem;
+}
+
+.section-nav-element {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: "Open Sans";
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+    box-shadow: none;
+    display: block;
+}
+
+.section-nav-element:hover {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: "Open Sans";
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+}
+
+.subtitle {
+    display: block;
+    font-size: 1.01rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-family: "Open Sans";
+    font-weight: 500;
+    transform: translate3d(0, -5px, 0);
+}
+
+
+.callout {
+    border-left: 4px solid var(--primary-color);
+    background-color: #293b8653;
+    padding: 0.5rem 1rem;
+    font-family: "Open Sans";
+    border-radius: 1rem;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: #ffffff05;
+  border: 2px solid var(--bg-color);
+  margin-bottom: 5px;
+  border-left: 2px inset var(--text-color)
+}
+
+
+footer {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.8em;
+    margin-top: 20px;
+    font-family: "Open Sans";
+    border-top: 0.1rem solid var(--text-color);
+}
+
+.license {
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 20px;
+    font-family: "Open Sans";
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+td, th {
+  border: 1px solid var(--text-color);
+  text-align: left;
+  padding: 0.25rem;
+  font-family: "Open Sans";
+}
+
+@media (max-width: 934px) {
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: var(--primary-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-inline: 1rem;
+  }
+
+  .div-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  .texto-nav {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .item-nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item-nav:not(:last-child) {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5em;
+}
+
+.item-nav-texto {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 0.5em;
+}
+
+.texto-nav {
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: #425394;
+  border-radius: 10px;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:active {
+    color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+  .articles-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .article-card-banner {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .sign-columns {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .section-nav {
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding-left: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p, a, .article-card-description, .section-nav-element {
+    font-size: 1rem;
+  }
+  .content {
+    padding: 1em;
+    align-items: flex;
+  }
+  .section-nav {
+    display: none;
+  }
+  .author-img {
+    display: none;
+  }
+  .author {
+    display: inline;
+    text-align: center;
+    background-color: var(--bg-color);
+    font-size: 0.8em;
+}
+  img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+  a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+
+a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  transform: translate3d(0, -2px, 0);
+}
+.license {
+    text-align: center;
+    font-size: 0.65em;
+    font-family: "Open Sans";
+    color: var(--text-color);
+    text-decoration: none;
+}
+}
