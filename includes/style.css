@@ -141,7 +141,9 @@ a {
   text-decoration: none;
   font-family: "Open Sans";
   transition: all 0.2s ease-in-out;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a:hover {
@@ -349,6 +351,16 @@ footer {
     font-family: "Open Sans";
     color: var(--text-color);
     text-decoration: none;
+}
+
+.web-name:hover {
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transform: translate3d(0, 0, 0);
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 934px) {

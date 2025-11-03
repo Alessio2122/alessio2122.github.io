@@ -37,6 +37,16 @@ nav {
   padding-inline: 1rem;
 }
 
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: "Open Sans";
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .div-nav {
   display: flex;
   align-items: center;
@@ -141,7 +151,9 @@ a {
   text-decoration: none;
   font-family: "Open Sans";
   transition: all 0.2s ease-in-out;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a:hover {
@@ -362,6 +374,16 @@ td, th {
   text-align: left;
   padding: 0.25rem;
   font-family: "Open Sans";
+}
+
+.web-name:hover {
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transform: translate3d(0, 0, 0);
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 934px) {
