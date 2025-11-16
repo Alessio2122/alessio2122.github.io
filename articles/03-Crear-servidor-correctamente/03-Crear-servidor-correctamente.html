@@ -107,29 +107,49 @@
             </div>
             <h2>Introducción</h2>
             <p>Ya he hablado en otras ocasiones de los <a href="/articles/01-Entrar-servidor-consola/01-Entrar-servidor-consola.html">servidores de Minecraft en Bedrock y cómo conectarse desde consola</a> porque es realmente difícil si no conoces cómo. Esta vez quiero hablar sobre cómo crear un servidor de Minecraft (Java o Bedrock o ¡las dos a la vez!) con simplemente una página web (o unas cuantas).</p>
-            <p>Lo primero que quiero destacar es que como no pagas dinero en los hosteadores gratis, la gente gana de los anuncios, así que te recomiendo que te pongas un bloqueador de anuncios. Aunque hay gente que quiere comer de verdad así que no te dejan usar la página con bloqueador así que... queda en tu decisión usarlo dependiendo de la situación y lo que tú necesites y quieras.</p>
-            <p>Lo siguiente es que tú puedes crear tu servidor como quieras, pero estas son unas directrices generales que puedes usar o no, es tu decisión (¿por qué digo tanto esto?).</p>
-            <p>Finalmente, espero que aprendas algo interesante aquí así que comencemos:</p>
+            <p>Lo primero que quiero destacar es que tú puedes crear tu servidor como quieras, pero estas son unas directrices generales que puedes usar o no, es tu decisión.</p>
+            <p>Finalmente, espero que aprendas algo interesante aquí, así que, comencemos:</p>
 
             <h2>Paso 1. Crear el servidor</h2>
-            <p>Está claro que si no tienes servidor no hay juego, así que ya tenemos lo principal. Debes buscar un lugar donde puedas hostear tu servidor.</p>
-            <p><i>Espera, espera, espera... ¡¿HOSTEAR?!</i> Sí, es un término extraño, y se define como:</p>
-            <div class="callout">
-            <h3 style="color:var(--primary-color)">hostear¹</h3>
+            <p>Está claro que si no tienes servidor no hay juego, así que vamos a por lo incial. Debes buscar un lugar donde puedas <a href="#%C2%BFqu%C3%A9-es-hostear?">hostear</a> tu servidor.</p>
+            <p>Así que básicamente es utilizar un ordenador para soportar tu mundo de Minecraft, las acciones de las personas, mobs, mecanismos... Hay varios métodos para hostear tu mundo:</p>
+            <h3>Método 1. Utilizar una página web de hosteado gratis</h3>
+            <p>Este es uno de los métodos más sencillos que puedes utilizar. Dejas tu servidor a manos de gente <i>desconocida</i> que te permite guardar todos los datos de tu mundo sin complicaciones y con algunos ajustes especiales a cambio de dinero o llenarte la página de anuncios. Dependiendo de lo majos que sean los que mantienen el servidor, te permiten gestionar más cosas, como el almacenamiento, plugins y otras cosas. Ejemplos de estas páginas de hosteo son (y no estoy siendo patrocinado): <a href="https://aternos.org/">Aternos</a>, <a href="https://play.hosting/">play·hosting</a>, <a href="https://falixnodes.net/">Falix</a>, <a href="https://wisehosting.com/">WiseHosting</a>...</p>
+            <p>Todo es seguir las instrucciones, buscar la versión, ponerla, encender el servidor y configurarlo en sus configuraciones. Compartes la I.P. con tus amigos y ya. Todo esto para jugar rapidamente, sin plugins, mods o ajustes especiales (lo veremos más adelante).</p>
+            <h3>Método 2. Utilizar tu propio ordenador</h3>
+            <p>El método que sí he probado y puedo decir que es realmente interesante y algo complicado. Se basa en que tu ordenador ejecute todo lo necesario y tú lo ajustas para lo que necesitas y todo manualmente. Como vamos a ir poco a poco, explicaré muy brevemente cómo crear el servidor, y luego lo iré definiendo más.</p>
+            <p>El servidor se ejecuta en un archivo <code>.jar</code> hecho precisamente para el servidor. Este se descarga en <a href="https://www.minecraft.net/es-es/download/server">la página oficial de Minecraft</a>. Despues, desde la terminal debes entrar a la carpeta en la que tengas el archivo. Finalmente, ejecuta lo siguiente (código proveniente de <a href="https://www.minecraft.net/es-es/download/server">Minecraft</a>) <code>java -Xmx1024M -Xms1024M -jar (EL NOMBRE DEL ARCHIVO SIN LOS PARÉNTESIS) nogui</code>, todo lo que estás viendo parece un revoltijo de símbolos y palabras sin sentido, así que, definámoslo:</p>
+
+            <ul>
+              <li><code>java</code>: el lenguaje en el que está programado el ejecutable.</li>
+              <li><code>-Xmx1024M</code>: la cantidad máxima de memoria RAM que puede usar el servidor. En este caso, 1024 megabytes (1 gigabyte). Puedes cambiarlo a más o menos dependiendo de la memoria RAM que quieras usar.</li>
+              <li><code>-Xms1024M</code>: la cantidad mínima de memoria RAM que puede usar el servidor. En este caso, 1024 megabytes (1 gigabyte). Puedes cambiarlo a más o menos dependiendo de la memoria RAM que quieras usar como mínimo.</li>
+              <li><code>-jar</code>: indica que se va a ejecutar un archivo <code>.jar</code>.</li>
+              <li><code>(EL NOMBRE DEL ARCHIVO SIN LOS PARÉNTESIS)</code>: debes poner el nombre del archivo .jar que has descargado, sin los paréntesis que he escrito yo.</li>
+              <li><code>nogui</code>: indica que no se va a abrir la interfaz gráfica del servidor. Sí, el servidor tiene interfaz gráfica si quitas esta parte, pero no es nada del otro mundo.</li>
+            </ul>
+            <hr>
+
+            <p>Un segundo... Aún falta una cosa, hay un acuerdo llamado <a href="https://www.minecraft.net/es-es/eula">EULA</a> creado por Minecraft, y para jugar debes aceptarlo, entrando en la carpeta del ejecutable y encontrando el archivo <i>EULA.txt</i>. Debe poner:</p>
+
+            <pre>
+              <code>
+#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://aka.ms/MinecraftEULA).
+#(DÍA MES NÚMERO DE DÍA HORA:MINUTO:SEGUNDO ZONA HORARIA AÑO)
+eula=false
+              </code>
+            </pre>
+
+            <h2>Preguntas frecuentes</h2>
+            <h3><i>¿Qué es hostear?</i></h3>
+            <span style="color:var(--primary-color); font-size:1.2em; font-weight: 650;">hostear¹</span>
             <p>Del ing. <i>host.</i></p>
             <ol>
                 <li style="color: #9b9b9b55"><span style="color: #9b9b9b55">tr. En streaming (como en Twitch)...</span></li>
                 <li>tr. En videojuegos, crear o ser el servidor principal de una partida en la que se conectan otros jugadores.</li>
             </ol>
-            </div>
-            <p>Así que básicamente es utilizar un ordenador para soportar tu mundo de Minecraft, las acciones de las personas, mobs, mecanismos... Hay varios métodos para hostear tu mundo:</p>
-            <h3>Método 1. Utilizar una página web de hosteado gratis</h3>
-            <p>Este es uno de los métodos más sencillos que puedes utilizar. Dejas tu servidor a manos de gente <i>desconocida</i> que te permite guardar todos los datos de tu mundo sin complicaciones y con algunos ajustes especiales a cambio de dinero o llenarte la página de anuncios. Ejemplos de estas páginas de hosteo son (y no estoy siendo patrocinado): <a href="https://aternos.org/">Aternos</a>, <a href="https://play.hosting/">play·hosting</a>, <a href="https://falixnodes.net/">Falix</a>, <a href="https://wisehosting.com/">WiseHosting</a>...</p>
-            <p>Todo es seguir las instrucciones, buscar la versión, ponerla, encender el servidor y configurarlo en sus configuraciones. Compartes la I.P. con tus amigos y ya. Todo esto para jugar rapidamente, sin plugins, mods o ajustes especiales (lo veremos más adelante).</p>
-            <h3>Método 2. Utilizar tu propio ordenador</h3>
-            <p>El método que sí he probado y puedo decir que es realmente interesante y algo complicado. Se basa en que tu ordenador ejecute todo lo necesario y tú lo ajustas para lo que necesitas, todo manualmente y sin interfaces bonitas. Voy a ser majo y voy a explicar más o menos cómo hacerlo rapidamente.</p>
-            <h4>Paso 1. Descargar el ejecutable del servidor</h4>
-            <p>El servidor se ejecuta usando un ejecutable proporcionado o no por Mojang. Como es una configuración rápida</p>
+            <h3>¿Qué es y cómo entro en un terminal?</h3>
+            <p>Aunque se nos vaya del tema lo voy a explicar. Es la forma más primitiva de un ordenador. En este se utilizan solo comandos, y está en casi todos los ordenadores y sistemas operativos. En Windows lo tratan como <i>aplicación</i>, y se abre desde el <i>Inicio de Windows</i>, buscando <code>Cmd</code>, o <code>Terminal</code>. También puedes entrar en la carpeta que quieras abrir en el terminal, pulsar clic derecho y <i>Abrir en Terminal</i>.</p>
           </div>
         </div>
 

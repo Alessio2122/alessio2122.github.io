@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+  <html lang="es">
+<script>
+  // Cargar el header
+  fetch('/others/VoltageCraft/includes/header-VoltageCraft.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+
+  // Cargar el footer
+  fetch('/includes/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el footer:', error));
+
+  // Generar el índice de secciones
+  // Este script crea un índice de secciones basado en los encabezados del documento
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById('section-nav');
+    if (!nav) return;
+
+    // Capturamos encabezados y mapeamos a {texto, nivel, id}
+    const sections = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(sec => {
+      let id = sec.id || sec.textContent.trim().replace(/\s+/g, '-').toLowerCase();
+      sec.id = id;
+      return { text: sec.textContent, id, level: +sec.tagName[1] };
+    });
+    if (sections.length === 0) return;
+
+    let html = '';
+    let currentLevel = 1;
+    sections.forEach(({ text, id, level }) => {
+      while (currentLevel < level) { html += '<ul>'; currentLevel++; }
+      while (currentLevel > level) { html += '</ul>'; currentLevel--; }
+      html += `<li><a href="#${id}" class="section-nav-element">${text}</a></li>`;
+    });
+
+    while (currentLevel > 1) { html += '</ul>'; currentLevel--; }
+
+    nav.innerHTML = `<ul>${html}</ul>`;
+  });
+
+</script>
+</script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Tabla de renombramientos de items | VoltageCraft</title>
+    <link rel="icon" type="image/x-icon" href="/others/VoltageCraft/includes/VoltageCraft-Logo.png">
+
+    <link rel="stylesheet" href="/others/VoltageCraft/includes/style-VoltageCraft.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Metadatos-->
+    <meta name="description" content="¡No deberías estar aquí!" />
+    <meta name="author" content="" />
+    <meta name="date" content="27/09/2025" />
+
+  </head>
+  <header>
+    <div id="header"></div>
+  </header>
+  <body>
+    <main>
+      <!--Banner-->
+      <div class="banner">
+        <img src="/others/VoltageCraft/includes/VoltageCraft-Banner 1900x342 75.jpg" class="banner-image" width="100%">
+      </div>
+      <!--3 columnas-->
+      <div class="columns">
+        <!-- Columna izquierda - Autor -->
+        <div class="author">
+        </div>
+
+        <!-- Columna central - Contenido -->
+        <div class="content">
+          <h1>ULV Nº1: La norma primordial</h1>
+          <span class="subtitle">La ley más importante y que debe ser siempre aceptada.</span>
+          <ol>
+            <li>El juego dentro del servidor no debe interferir negativamente a la vida real de los jugadores.</li>
+            <li>Los jugadores no pueden molestar a otros en la vida real por el juego.</li>
+            <li>Los jugadores pueden hablar sobre sus nuevos proyectos, ideas, etc.</li>
+            <li>Los jugadores no deben pronunciar el nombre de los equipos del servidor delante de otras personas no pertenecientes o que no deben saber de la existencia del servidor.</li>
+            <li>Los jugadores deben respetar a los demás en la vida real.</li>
+          </ol>
+        </div>
+
+        <!-- Columna derecha - Índice de secciones -->
+        <div>
+          <nav id="section-nav" class="section-nav"></nav>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer -->
+      <div id="footer"></div>
+    </footer>
+  </body> 
+</html>
