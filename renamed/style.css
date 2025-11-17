@@ -209,7 +209,7 @@ a {
 
 .stat-number {
     color: var(--primary);
-    font-family: inherit;
+    font-family: 'Red Hat Mono', Courier, monospace;
     font-size: 2.5rem;
 }
 
