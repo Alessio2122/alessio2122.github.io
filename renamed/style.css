@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --background: #0a0a0f;
+    --foreground: #111116a4;
+    --font-color: #e0e0e0;
+    --font-color-dark: #888;
+    --primary: #3959d5;
+    --primary-dark: #2c437a36;
+    --border: #222;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Red Hat Mono', Courier, monospace;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.header {
+    z-index: 100;
+    border-bottom: 2px solid var(--primary);
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    background: var(--foreground);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.header-content {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo-container {
+    align-items: center;
+    gap: 1rem;
+    display: flex;
+}
+
+.logo-icon {
+    letter-spacing: -.05em;
+    background: transparent;
+    border: 2px solid transparent;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.logo-name {
+    color: var(--primary);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav {
+    gap: 2rem;
+    display: flex;
+}
+
+.nav a {
+    color: var(--font-color);
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.nav a:hover {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary-dark);
+    background-color: var(--primary-dark);
+}
+
+main {
+    flex: 1;
+}
+
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: inline;
+}
+
+p {
+    color: var(--font-color-dark);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+    padding-bottom: .2rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, #111116 0%, var(--background) 100%);
+    padding: 2rem;
+}
+
+.hero-content span {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.hero-author {
+    color: var(--font-color-dark);
+    font-size: .875rem;
+    margin: 0rem;
+}
+
+.create-section, .articles-section {
+    grid-column: 1;
+}
+
+.articles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    display: grid;
+}
+
+.article-card {
+    background: #111116;
+    border: 1px solid var(--border);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    transition: all .2s;
+    display: flex;
+}
+
+.article-card:hover {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary-dark);
+}
+
+.article-header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.category {
+    color: var(--primary);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background: #152046;
+    padding: .25rem .75rem;
+    font-size: .75rem;
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.article-card time {
+    color: #666;
+    font-size: .875rem;
+}
+
+.article-card p {
+    color: var(--font-color-dark);
+    flex-grow: 1;
+}
+
+.article-footer {
+    border-top: 1px solid var(--border);
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    display: flex;
+}
+
+.author{
+    color: #666;
+    font-size: .875rem;
+}
+
+.stats {
+    margin: 2rem 0;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: sticky;
+    top: 100px;
+}
+
+.stat-box {
+    text-align: center;
+    background: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+}
+
+.stat-number {
+    color: var(--primary);
+    font-family: inherit;
+    font-size: 2.5rem;
+}
+
+.stat-label {
+    color: var(--font-color-dark);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-top: .5rem;
+    font-size: .75rem;
+}
+
+footer {
+    text-align: center;
+    background: var(--foreground);
+    border-top: 2px solid var(--primary);
+    padding: .45rem;
+}
+
+.footer {
+    color: #666;
+    margin: 0;
+    font-size: .75rem;
+}
+
+.footer a {
+    color: #666;
+    margin: 0;
+    font-size: .75rem;
+}
+
+.license {
+    color: #444;
+    font-size: .65rem;
+    margin-top: .5rem;
+}

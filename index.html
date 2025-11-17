@@ -1,98 +1,110 @@
-<!DOCTYPE html>
-  <html lang="es">
-<script>
-  // Cargar el header
-  fetch('/includes/header.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('header').innerHTML = html;
-    })
-    .catch(error => console.error('Error al cargar el header:', error));
-    // Cargar el footer
-    fetch('/includes/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer').innerHTML = html;
-    })
-    .catch(error => console.error('Error al cargar el footer:', error));
-</script>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+    <head>
+        <title>Inicio | Alessio2122</title>
+        <link rel="icon" type="image/x-icon" href="/includes/logo.png">
 
-    <title>Inicio | Alessio2122</title>
-    <link rel="icon" type="image/x-icon" href="/includes/logo.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/includes/style.css">
-    
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Last-Modified" content="0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Metadatos-->
-    <meta name="description" content="¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo).
-      Aquí es donde iré subiendo artículos sobre Minecraft, programación, hacking de consolas, videojuegos retro, emulación, juegos actuales geniales... Todo ello y mis vídeos en el canal de YouTube (https://youtube.com/@alessio2122mc?si=wJpvai4JHd4zwPSo) @Alessio2122MC.
-      Algunas veces serán temas nuevos, otras más información a partir de un vídeo… Pero siempre sobre temas instructivos, explicativos y que a mi parecer son interesantes." />
-    <meta name="author" content="Alessio2122" />
-    <meta name="date" content="2025/08/22" />
-  </head>
-  <body>
-    <header>
-      <!-- Header -->
-      <div id="header"></div>
-    </header>
-    <main class="index">
-      <h1>Inicio</h1>
-      
-      <p>¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo).
-      Aquí es donde iré subiendo artículos sobre Minecraft, programación, hacking de consolas, videojuegos retro, emulación, juegos actuales geniales... Todo ello y mis vídeos en el canal de YouTube (<a href="https://youtube.com/@alessio2122mc?si=wJpvai4JHd4zwPSo">@Alessio2122MC</a>).
-      Algunas veces serán temas nuevos, otras más información a partir de un vídeo… Pero siempre sobre temas instructivos, explicativos y que a mi parecer son interesantes.</p>
-      
-      <p>Si estás aquí, significa que te interesa lo que hago (o estabas investigando por internet y me has encontrado), de cualquier forma, espero que disfrutes de mi página web.</p>
-
-      <!--***********************************************************-->
-
-      <!-- Sección "Últimos artículos"-->
-      <h2>Últimos artículos</h2>
-      <div class="articles-cards">
-        <!--Artículo 01-->
-        <a href="/articles/01-Entrar-servidor-consola/01-Entrar-servidor-consola.html">
-        <div class="article-card">
-          <img src="/articles/01-Entrar-servidor-consola/attachments/01-Banner 1900x342 75.jpg" class="article-card-banner">
-          <div class="article-card-title">
-            <span>Cómo entrar a un servidor de Minecraft desde consola</span>
-          </div>
-          <div class="article-card-description">
-            <span>2 metodos verificados en una consola Nintendo Switch.</span>
-          </div>
-          <div class="article-card-footer">
-            <span> Escrito por: Alessio2122<br>
-              Publicado: 25/08/2025</span> 
-          </div>
-        </div>
-        </a>
-        <!--Artículo 02-->
-        <a href="/articles/02-AC-PC/02-AC-PC.html">
-        <div class="article-card">
-          <img src="/articles/02-AC-PC/attachments/02-Banner 1900x342 75.jpg" class="article-card-banner">
-          <div class="article-card-title">
-            <span>Cómo emular Animal Crossing (Gamecube) en PC</span>
-          </div>
-          <div class="article-card-description">
-            <span>Diferentes versiones y gráficos remasterizados.</span>
-          </div>
-          <div class="article-card-footer">
-            <span> Escrito por: Alessio2122<br>
-              Publicado: 03/09/2025</span> 
-          </div>
-        </div>
-        </a>
-      </div>
-    </main>
-    <footer>
-      <!-- Footer -->
-      <div id="footer"></div>
-    </footer>
-  </body> 
+        <link rel="stylesheet" href="/renamed/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-content">
+                <a href="/">
+                    <div class="logo-container">
+                        <img src="/includes/logo.png" alt="Alessio2122 logo" class="logo-icon">
+                        <span class="logo-name">Alessio2122</span>
+                    </div>
+                </a>
+                <nav class="nav">
+                    <a href="/articles/articles.html">Artículos</a>
+                    <a href="/about/about.html">Sobre mí</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <span><i>La forma sigue a la función.</i></span>
+                    <p class="hero-author">–Walter Gropius (1883-1969).</p>
+                </div>
+            </section>
+            <section id="articles" class="articles-section">
+                <h2>Artículos recientes</h2>
+                <div class="articles-grid">
+                    <a href="/articles/01-Entrar-servidor-consola/01-Entrar-servidor-consola.html">
+                        <article class="article-card">
+                            <div class="article-header">
+                                <span class="category">Minecraft</span>
+                                <time>25/08/2025</time>
+                            </div>
+                            <span class="article-name">Cómo entrar a un servidor de Minecraft desde consola</span>
+                            <p>Dos metodos verificados en una consola Nintendo Switch. <strong>Aviso</strong>: Alessio2122 no se hace responsable de lo que pueda ocurrir a tu...</p>
+                            <div class="article-footer">
+                                <span class="author">Por: Alessio2122</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="/articles/02-AC-PC/02-AC-PC.html">
+                        <article class="article-card">
+                            <div class="article-header">
+                                <span class="category">Emulación</span>
+                                <time>03/09/2025</time>
+                            </div>
+                            <span class="article-name">Cómo emular Animal Crossing (Gamecube) en PC</span>
+                            <p>Diferentes versiones y gráficos remasterizados. <strong>Aviso</strong>: Alessio2122 no se hace responsable de lo que pueda ocurrir a tu...</p>
+                            <div class="article-footer">
+                                <span class="author">Por: Alessio2122</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="/404.html">
+                        <article class="article-card">
+                            <div class="article-header">
+                                <span class="category">???????</span>
+                                <time>??/??/????</time>
+                            </div>
+                            <span class="article-name">Próximamente en vuestros navegadores</span>
+                            <p>Solo puedo decirte que va a ser interesante y que estoy trabajando en ello, además de en muchas otras cosas...</p>
+                            <div class="article-footer">
+                                <span class="author">Por: Alessio2122</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+            <section id="stats">
+                <h2>Estadísticas</h2>
+                <div class="stats">
+                    <div class="stat-box">
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">artículos</p>
+                    </div>
+                    <div class="stat-box">
+                        <p class="stat-number">6</p>
+                        <p class="stat-label">suscriptores en YouTube</p>
+                    </div>
+                    <div class="stat-box">
+                        <p class="stat-number">?</p>
+                        <p class="stat-label">lectores</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p class="footer">Esta web está en desarrollo constante. Puede contener errores.<br>
+            Puedes reportarlos en el <a href="https://github.com/Alessio2122/alessio2122.github.io">repositorio de GitHub de esta página web.</a><br>
+            Sígueme en mis redes:
+            </p>
+            <p class="footer">
+                <a href="https://youtube.com/@alessio2122mc?si=wJpvai4JHd4zwPSo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" focusable="false" aria-hidden="true" style="pointer-events: none; display: flex; width: 2rem; height: 2rem; align-self: center; justify-self: center;">
+                <g><path fill="red" d="M21.58,7.19c-0.23-0.86-0.91-1.54-1.77-1.77C18.25,5,12,5,12,5S5.75,5,4.19,5.42   C3.33,5.65,2.65,6.33,2.42,7.19C2,8.75,2,12,2,12s0,3.25,0.42,4.81c0.23,0.86,0.91,1.54,1.77,1.77C5.75,19,12,19,12,19   s6.25,0,7.81-0.42c0.86-0.23,1.54-0.91,1.77-1.77C22,15.25,22,12,22,12S22,8.75,21.58,7.19z"></path>
+                <polygon fill="#FFFFFF" points="10,15 15,12 10,9  "></polygon></g>
+                </svg></a>
+            </p>
+            <span class="license" class="footer">© 2025 Alessio2122. Escrito, programado y diseñado por Alessio2122.<br>
+            Esta obra está protegida bajo una licencia </span>
+            <a href="https://creativecommons.org/licenses/by/4.0/deed.es" class="license">Creative Commons Attribution 4.0 Internacional (CC BY 4.0)</a> <span class="license">impuesta por el autor.</span>
+        </footer>
 </html>
