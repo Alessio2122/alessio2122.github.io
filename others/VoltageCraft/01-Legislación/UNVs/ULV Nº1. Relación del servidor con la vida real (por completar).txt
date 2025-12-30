@@ -1,0 +1,102 @@
+UNV Nº1. Normalización de las leyes, normas y tratados.
+
+Esta norma tiene como objetivo definir cómo se deben crear, modificar, eliminar y los elementos de las leyes, normas y tratados.
+
+Sección 1. Leyes
+
+Sección 1.1. Añadir leyes
+
+Las leyes deben pasar por un sistema de creación y aceptación de la misma:
+
+1. Planteamiento de la idea inicial: una persona cualquiera plantea una idea, y la refina hasta el punto en el que quiere presentarla a la comunidad.
+2. Planteamiento a la comunidad: se explica la ley al público y se crea una encuesta con las opciones "Sí" y "No" y la duración predeterminada definida para las encuestas, a menos que se defina otro tiempo. Si ganara el "Sí", por mayoría completa —todos opinan lo mismo— la ley se incluiría en la legislación del servidor.
+3. Refactorización: si por mayoría ganara el "No", o más de una persona dijera que no, se les preguntaría por qué no es aceptada. Si la razón fuera por alguna parte, se modificaría la ley hasta aclarar todo lo posible, y se añadiría a la legislación. Si la razón fuera por el tema y/o la ley en conjunto, esta no sería aceptada y por lo tanto, no se añadiría junto a las leyes del servidor.
+
+Sección 1.2. Elementos de una ley
+
+Una ley debe incluir una serie de elementos obligatorios:
+
+1. Título: debe usar la estructura: "ULV Nº(número de ley). (tema de la ley)".
+2. Introducción: pequeña introducción sobre la ley y su tema en conjunto. 
+3. Articulado: secciones con número y un tema más específico. Deben tener unidad temática: las leyes deben seguir un tema principal del que no debe desviarse. Además, no debe contradecir a ninguna de las anteriores leyes, normas o tratados aceptados.
+
+Sección 1.3. Modificar leyes
+
+Las leyes deben pasar por un sistema de modificación y aceptación de la ley:
+
+1. Planteamiento de la modificación: se piensa una idea de modificación, refinándola hasta que se quiera plantear a la comunidad. 
+2. Planteamiento a la comunidad: se comenta al público y se crea una encuesta con las opciones "Sí" y "No", y la duración predeterminada definida para las encuestas (a menos que se defina otro tiempo). Si ganara el "Sí", por mayoría completa, la ley se modificaría en la legislación del servidor.
+3. Refactorización: si por mayoría ganara el no, o más de una persona dijera que no, se les preguntaría por qué no es aceptada. Si la razón fuera por alguna parte, se modificaría la ley hasta aclarar todo lo posible, y se modificaría en la legislación.
+
+Sección 1.4. Abrogación de leyes
+
+Para abolir una ley, será necesario seguir un protocolo:
+
+Planteamiento de la abrogación: se plantea la razón por la que se debería dejar de hacer vigente la ley. Se plantea la idea a la comunidad utilizando una encuesta con las opciones "Sí" y "No". Si ganara el "Sí" por mayoría total, se aboliría la ley definitivamente. Si por el contrario más de una persona vota que no, se les preguntaría por qué no es aceptada. La resolución de este debate repercutiría en la legislación.
+
+Sección 2. Normas
+
+Sección 2.1. Añadir normas
+
+Las normas deben pasar por un sistema de creación y aceptación de la misma:
+
+1. Planteamiento de la idea inicial: una persona cualquiera plantea una idea, y la refina hasta el punto en el que quiere presentarla a la comunidad.
+2. Planteamiento a la comunidad: se explica la norma al público y se crea una encuesta con las opciones "Sí" y "No" y la duración predeterminada definida para las encuestas, a menos que se defina otro tiempo. Si ganara el "Sí", por mayoría completa la ley se incluiría en la legislación del servidor.
+3. Refactorización: si por mayoría ganara el "No", o más de una persona dijera que no, se les preguntaría por qué no es aceptada. Si la razón fuera por alguna parte, se modificaría la ley hasta aclarar todo lo posible, y se añadiría a la legislación. Si la razón fuera por el tema y/o la ley en conjunto, esta no sería aceptada y por lo tanto, no se añadiría junto a las leyes del servidor.
+
+Sección 2.2. Elementos de una norma
+
+Una norma debe incluir una serie de elementos obligatorios:
+
+1. Título: debe usar la estructura: "UNV Nº(número de norma). (tema de la norma)".
+2. Introducción: pequeña introducción sobre la norma y su tema en conjunto. 
+3. Articulado: secciones con número y un tema más específico. Deben tener unidad temática: las normas deben seguir un tema principal del que no debe desviarse. Además, no debe contradecir a ninguna de las anteriores leyes, normas o tratados.
+
+Sección 2.3. Modificar normas
+
+Las normas deben pasar por un sistema de modificación y aceptación de la misma:
+
+1. Planteamiento de la modificación: se plantea una idea de modificación, refinándola hasta que se plantee a la comunidad. 
+2. Planteamiento a la comunidad: se crea una encuesta con las opciones "Sí" y "No", y con la duración predeterminada definida para las encuestas (a menos que se defina otro tiempo). Si ganara el sí, por mayoría completa la norma se modificaría en la legislación del servidor.
+3. Refactorización: si por mayoría ganara el no, o más de una persona dijera que no, se les preguntaría a todos por qué no es aceptada. Si la razón fuera por alguna parte, se modificaría la norma hasta aclarar todo lo posible, y se modificaría en la legislación. Si la razón fuera por el tema y/o la norma en conjunto, esta no será aceptada y por lo tanto, no será modificada junto a las normas del servidor.
+
+Sección 2.4. Abrogación de tratados
+
+Para abrogaciar un tratado, será necesario seguir un protocolo:
+
+1. Planteamiento de la abrogacía: se plantea la razón por la que se debería dejar de hacer vigente la norma.
+2. Planteamiento a la comunidad: se plantea la idea a la comunidad utilizando una encuesta con las opciones "Sí" y "No". Si gana por mayoría total, se abrogaciará la norma definitivamente. Si por el contrario más de una persona votan que no, se celebrará un debate en el servidor. La resolución de este repercutirá en la legislación.
+
+Sección 3. Tratados
+
+Sección 3.1. Añadir tratados
+
+Los tratados deben pasar por un sistema de creación y aceptación de la misma:
+
+1. Planteamiento de la idea inicial: una persona o equipo plantean una idea y la refinan hasta presentarla a los equipos o personas a las que les incumbe. 
+2. Planteamiento a los equipos o personas: estos hablan sobre el tratado, y posibles modificaciones. Se modifican y aclaran los términos y condiciones del tratado. 
+3. Firma y publicación: se firma y acepta el tratado entre las personas. Finalmente se envía al Admin para que la añada a la legislación. 
+
+Sección 3.2. Elementos de un tratado
+
+Un tratado debe incluir una serie de elementos obligatorios:
+
+1. Título: debe usar la estructura "UTV Nº(número de tratado). (tema del tratado)".
+2. Subtítulo: de qué habla, el tema.
+3. Introducción: pequeña introducción sobre el tratado y su tema en conjunto. 
+4. Articulado: secciones con número y un tema más específico en cada una. Es obligatorio que un tratado tenga unos términos, condiciones y una cláusula que define qué ocurrirá cuando se acepte el tratado. Deben tener unidad temática: las normas deben seguir un tema principal del que no debe desviarse. Además, no debe contradecir a ninguna de las anteriores leyes, normas o tratados.
+
+Sección 3.3. Modificar tratados
+
+Los tratados deben pasar por un sistema de modificación y aceptación del mismo:
+
+1. Planteamiento de la modificación: se plantea una idea de modificación, refinándola hasta que se plantee a los equipos o personas a las que les incumba. 
+2. Planteamiento a los equipos o personas: se presenta el tratado a los equipos o personas, y se definen cambios y ediciones. 
+3. Firma y publicación: se vuelve a firmar y aceptar el tratado, y se envía al admin para publicarla en la legislación.
+
+Sección 3.4. Abrogación de tratados
+
+Para abrogaciar una norma, será necesario seguir un protocolo:
+
+1. Planteamiento de la abrogacía: se plantea la razón por la que se debería dejar de hacer vigente el tratado.
+2. Planteamiento a la gente a la que le incumba: se plantea la idea a la gente que le incumba celebrarando un debate en el servidor. La resolución de este repercutirá en la legislación.
