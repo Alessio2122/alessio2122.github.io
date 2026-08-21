@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles', ({ data }) => !data.draft);
+
+interface CategoryNode {
+  name: string;
+  fullPath: string;
+  articles: typeof articles;
+  children: Record<string, CategoryNode>;
+}
+
+function buildCategoryTree(articles: typeof articles): Record<string, CategoryNode> {
+  const root: Record<string, CategoryNode> = {};
+
+  for (const article of articles) {
+    const category = article.data.category || 'General';
+    const parts = category.split('/');
+    let current = root;
+
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i];
+      const fullPath = parts.slice(0, i + 1).join('/');
+
+      if (!current[part]) {
+        current[part] = {
+          name: part,
+          fullPath,
+          articles: [],
+          children: {},
+        };
+      }
+
+      if (i === parts.length - 1) {
+        current[part].articles.push(article);
+      }
+
+      current = current[part].children;
+    }
+  }
+
+  return root;
+}
+
+function sortTree(node: Record<string, CategoryNode>): Record<string, CategoryNode> {
+  const sorted: Record<string, CategoryNode> = {};
+  const keys = Object.keys(node).sort((a, b) => a.localeCompare(b, 'es'));
+
+  for (const key of keys) {
+    sorted[key] = {
+      ...node[key],
+      children: sortTree(node[key].children),
+    };
+    sorted[key].articles.sort(
+      (a, b) => new Date(b.data.datetime).getTime() - new Date(a.data.datetime).getTime()
+    );
+  }
+
+  return sorted;
+}
+
+const categoryTree = sortTree(buildCategoryTree(articles));
+
+function getTopLevelCategories(tree: Record<string, CategoryNode>): CategoryNode[] {
+  return Object.values(tree);
+}
+
+function getAllCategoriesFlat(tree: Record<string, CategoryNode>, prefix = ''): CategoryNode[] {
+  const result: CategoryNode[] = [];
+  for (const node of Object.values(tree)) {
+    result.push(node);
+    if (Object.keys(node.children).length > 0) {
+      result.push(...getAllCategoriesFlat(node.children));
+    }
+  }
+  return result;
+}
+
+const allCategories = getAllCategoriesFlat(categoryTree);
+const topLevel = getTopLevelCategories(categoryTree);
+
+function toAnchorId(path: string): string {
+  return path.replace(/\//g, '-');
+}
+---
+
+<Layout title="Artículos" description="Todos los artículos publicados en la web." author="Alessio2122" datetime="2025-08-18" category="general">
+        <div class="main-content">
+        <h1>Artículos</h1>
+
+        <nav class="category-nav">
+            {allCategories.map(cat => (
+                <a href={`#${toAnchorId(cat.fullPath)}`} class="category">{cat.fullPath}</a>
+            ))}
+        </nav>
+
+        {topLevel.map(node => (
+            <section class="category-section" id={toAnchorId(node.fullPath)}>
+                <h2>{node.name}</h2>
+                {node.articles.length > 0 && (
+                    <div class="articles-grid">
+                        {node.articles.map(article => (
+                            <a href={`/articles/${article.id}`} class="article-card" special="false">
+                                <div class="article-header">
+                                    <span class="category">{article.data.category || 'General'}</span>
+                                    <time datetime={article.data.datetime}>{article.data.date || article.data.datetime.split('-').reverse().join('/')}</time>
+                                </div>
+                                <h3>{article.data.title}</h3>
+                                <p class="dynamic-text-container">
+                                    <span class="dynamic-text">{article.data.description}</span>
+                                </p>
+                                <div class="article-author">Por: {article.data.author || 'Alessio2122'}</div>
+                            </a>
+                        ))}
+                    </div>
+                )}
+                {Object.keys(node.children).length > 0 && Object.values(node.children).map(child => (
+                    <div class="subcategory">
+                        <h3 id={toAnchorId(child.fullPath)}>{child.name}</h3>
+                        {child.articles.length > 0 && (
+                            <div class="articles-grid">
+                                {child.articles.map(article => (
+                                    <a href={`/articles/${article.id}`} class="article-card" special="false">
+                                        <div class="article-header">
+                                            <span class="category">{article.data.category || 'General'}</span>
+                                            <time datetime={article.data.datetime}>{article.data.date || article.data.datetime.split('-').reverse().join('/')}</time>
+                                        </div>
+                                        <h3>{article.data.title}</h3>
+                                        <p class="dynamic-text-container">
+                                            <span class="dynamic-text">{article.data.description}</span>
+                                        </p>
+                                        <div class="article-author">Por: {article.data.author || 'Alessio2122'}</div>
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </section>
+        ))}
+    </div>
+</Layout>
