@@ -3,7 +3,7 @@ title: "Cómo entrar a un servidor de Minecraft desde consola"
 description: "Dos metodos verificados en una consola Nintendo Switch. Aviso Alessio2122 no se hace responsable de lo que pueda ocurrir a tu consola si ejecutas mal los pasos. Sigue la guía a tu propio riesgo. Se recomienda leer el texto varias veces antes de ponerse a ello. Introducción Creo que todos sabemos el dolor de cabeza que es intentar entrar a un servidor de Minecraft desde cualquier consola. Para los que no lo sepan, las consolas tienen una versión de Minecraft Bedrock, que a diferencia de Minecraft Java o Minecraft Bedrock para ordenadores y dispositivos móviles, no nos permite añadir servidores que no sean los predeterminados, los aprobados por Mojang. Por esto, esta guía incluye dos de los mejores métodos para conectarse a un servidor y que podáis jugar con vuestros amigos (o solos) sin perder la cabeza en el intento."
 subtitle: "Dos metodos verificados en una consola Nintendo Switch."
 author: "Alessio2122"
-datetime: "2026-08-25"
+datetime: "2026-08-26"
 img: "/assets/articles/01-Como-entrar-a-un-servidor/01-Banner 1900x342 75.jpg"
 category: "Minecraft"
 ---
