@@ -1,0 +1,41 @@
+---
+const site = Astro.site || new URL('https://alessio2122.github.io');
+const canonicalURL = new URL(Astro.url.pathname, site).toString();
+---
+
+<html lang="es">
+    <head>
+        <title>404 - Alessio2122</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" type="image/x-icon" href="/assets/logo_dark.png">
+
+        <meta name="description" content="Exacto. No hemos encontrado la página, y te hemos mandado aquí. ¿Posibles causas? Malformación del enlace, mala conexión, errores en enlaces de la web o que no quiero que veas algo. Por ahora, lo único que puedes hacer es volver a la página principal. Si buscabas algo secreto, aquí no lo vas a encontrar."/>
+        <meta name="author" content="Alessio2122"/>
+        <meta name="date" content="????-??-??"/>
+        <meta name="keywords" content="Alessio2122, Minecraft, Redstone, programación, invenciones, ideas"/>
+        <meta property="og:title" content="404 - Alessio2122"/>
+        <meta property="og:description" content="Exacto. No hemos encontrado la página, y te hemos mandado aquí. ¿Posibles causas? Malformación del enlace, mala conexión, errores en enlaces de la web o que no quiero que veas algo. Por ahora, lo único que puedes hacer es volver a la página principal. Si buscabas algo secreto, aquí no lo vas a encontrar."/>
+        <meta property="og:image" content="/assets/logo_dark.png"/>
+        <meta property="og:url" content={canonicalURL}/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="404 - Alessio2122"/>
+        <meta name="twitter:description" content="Exacto. No hemos encontrado la página, y te hemos mandado aquí. ¿Posibles causas? Malformación del enlace, mala conexión, errores en enlaces de la web o que no quiero que veas algo. Por ahora, lo único que puedes hacer es volver a la página principal. Si buscabas algo secreto, aquí no lo vas a encontrar."/>
+        <meta name="twitter:image" content="/assets/logo_dark.png"/>
+        <meta name="twitter:creator" content="Alessio2122"/>
+        <meta name="theme-color" content="#3959d5">
+        <link rel="canonical" href={canonicalURL}/>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="big-container">
+            <h1 class="big-title"><a href="/404.html">¡¿404?!</a></h1>
+            <hr>
+            <p>Exacto. No hemos encontrado la página, y te hemos mandado aquí.</p>
+            <p>¿Posibles causas? Malformación del enlace, mala conexión, errores en enlaces de la web o que no quiero que veas algo.</p>
+            <p>Por ahora, lo único que puedes hacer es volver a la <a href="/">página principal</a>.</p>
+            <p>Si buscabas algo secreto, aquí no lo vas a encontrar.</p>
+        </div>
+    </body>
+</html>

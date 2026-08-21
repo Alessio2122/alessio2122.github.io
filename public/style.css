@@ -436,6 +436,7 @@ nav a:hover {
 
 .hero-title {
     margin-bottom: 1rem;
+    justify-content: center;
 }
 
 .splash-text {

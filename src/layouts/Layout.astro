@@ -27,13 +27,13 @@ const ogImage = img ? new URL(img, site).toString() : new URL('/assets/logo.png'
         <meta name="author" content={author || "Alessio2122"}/>
         <meta name="date" content={datetime}/>
         <meta name="keywords" content={`${category || "general"}, ${title}, ${description}, Alessio2122, Minecraft, Redstone, programación, invenciones, ideas`}/>
-        <meta property="og:title" content={title}/>
-        <meta property="og:description" content={description}/>
+        <meta property="og:title" content={title === "Alessio2122 - Lo que me interesa explicado a mi manera" ? title : `${title} - Alessio2122`}/>
+        <meta property="og:description" content={description || "¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo). Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa."}/>
         <meta property="og:image" content={ogImage}/>
         <meta property="og:url" content={canonicalURL}/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content={title}/>
-        <meta name="twitter:description" content={description}/>
+        <meta name="twitter:title" content={title === "Alessio2122 - Lo que me interesa explicado a mi manera" ? title : `${title} - Alessio2122`}/>
+        <meta name="twitter:description" content={description || "¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo). Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa."}/>
         <meta name="twitter:image" content={ogImage}/>
         <meta name="twitter:creator" content={author || "Alessio2122"}/>
         <meta name="theme-color" content="#3959d5">

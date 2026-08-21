@@ -17,10 +17,10 @@ const recentArticles = articleList
 <Layout title="Alessio2122 - Lo que me interesa explicado a mi manera" description="¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo). Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa." author="Alessio2122" datetime="2025-08-18" category="general">
     <div class="hero">
         <div class="hero-container">
-            <h1 class="hero-title" style="justify-content: center;">Lo que me interesa explicado a mi manera</h1>
+            <h1 class="hero-title">Lo que me interesa explicado a mi manera</h1>
             <span class="splash-text" id="splash-text"></span>
-            <p class="hero-text">¡Hola! Bienvenido/a a la página oficial de <strong>Alessio2122</strong> (yo).</p>
-            <p class="hero-text">Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa.</p>
+            <p>¡Hola! Bienvenido/a a la página oficial de <strong>Alessio2122</strong> (yo).</p>
+            <p>Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa.</p>
             <div>
                 <a href="/articles" class="button">Ver artículos recientes</a>
                 <a href="/about" class="button button-secondary">Sobre Alessio2122</a>
@@ -31,7 +31,7 @@ const recentArticles = articleList
         <a href="/articles"><h2 id="artículos-recientes">Artículos recientes</h2></a>
         <div class="articles-grid">
             {recentArticles.map(article => (
-                <a href={`/articles/${article.id}`} class="article-card" special="false">
+                <a href={`/articles/${article.id}`} class="article-card">
                     <div class="article-header">
                         <span class="category">{article.data.category || 'General'}</span>
                         <time datetime={article.data.datetime}>{article.data.date || article.data.datetime.split('-').reverse().join('/')}</time>

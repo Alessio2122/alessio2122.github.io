@@ -1,43 +1,13 @@
-# Astro Starter Kit: Minimal
+<div align="center">
+    <img src="public/assets/logo.png" width="250px">
+    <h1>alessio2122.github.io</h1>
+</div>
 
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<div style="display: flex; flex-direction: column; justify-content: space-between; flex-wrap: wrap;">
+    <div style="justify-content: center; padding: clamp(1rem, 3vw, 2rem); background: radial-gradient(circle at center, var(--primary-color-dark) 0%,  transparent 100%); transition: all .2s ease-out; border: 1px solid var(--background-color); display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <h1 style="justify-content: center; margin-bottom: 1rem;">Lo que me interesa explicado a mi manera</h1>
+        <span class="splash-text" id="splash-text"></span>
+        <p>¡Hola! Bienvenido/a a la página oficial de <strong>Alessio2122</strong> (yo).</p>
+        <p>Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa.</p>
+    </div>
+</div>
