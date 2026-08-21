@@ -1,0 +1,33 @@
+---
+import { getCalloutIcon } from '../lib/callout-icons';
+
+interface Props {
+  type?: string;
+  title?: string;
+  foldable?: 'open' | 'closed' | null;
+}
+
+const { type = 'note', title, foldable } = Astro.props;
+const { svg, color } = getCalloutIcon(type);
+const [r, g, b] = color;
+---
+
+{
+  foldable ? (
+    <details class="callout callout-{type}" open={foldable === 'open' ? true : undefined} style="--callout-color: {r}, {g}, {b};">
+      <summary class="callout-header">
+        <span class="callout-icon" set:html={svg} />
+        {title && <span class="callout-title">{title}</span>}
+      </summary>
+      {Astro.slots.has('default') && <div class="callout-content"><slot /></div>}
+    </details>
+  ) : (
+    <div class="callout callout-{type}" style="--callout-color: {r}, {g}, {b};">
+      <div class="callout-header">
+        <span class="callout-icon" set:html={svg} />
+        {title && <span class="callout-title">{title}</span>}
+      </div>
+      {Astro.slots.has('default') && <div class="callout-content"><slot /></div>}
+    </div>
+  )
+}

@@ -1,0 +1,296 @@
+/* PDF Light Theme - Sobreescribe el tema oscuro para generación de PDFs */
+
+:root {
+    --background-color: #ffffff;
+    --foreground-color: #f5f5f5;
+    --font-color: #1a1a2e;
+    --font-color-dark: #555555;
+    --font-color-darker: #777777;
+    --primary-color: #2a4bc0;
+    --primary-color-dark: #e8edf8;
+    --border-color: #d0d0d0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    text-shadow: none;
+}
+
+h1 {
+    text-shadow: none;
+}
+
+h2 {
+    text-shadow: none;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+p a, ol a, ul a {
+    color: var(--primary-color);
+}
+
+p a::after, ol a::after, ul a::after {
+    background-color: var(--primary-color);
+}
+
+ul li::before {
+    color: var(--primary-color);
+    text-shadow: none;
+}
+
+ol li::before {
+    color: var(--primary-color);
+    text-shadow: none;
+}
+
+code {
+    color: var(--primary-color);
+    background: var(--foreground-color);
+}
+
+strong {
+    color: var(--font-color);
+}
+
+.header-content {
+    background: var(--foreground-color);
+    border-bottom: 2px solid var(--primary-color);
+    backdrop-filter: none;
+}
+
+.nav-a-active {
+    box-shadow: none;
+    background-color: var(--primary-color-dark);
+}
+
+nav a:hover {
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+    background-color: var(--primary-color-dark);
+}
+
+.hero-container {
+    background: var(--foreground-color);
+    border: 1px solid var(--border-color);
+}
+
+.stat-box {
+    background: var(--foreground-color);
+    border: 1px solid var(--border-color);
+}
+
+.stat-box:hover {
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+    background-color: var(--primary-color-dark);
+}
+
+.stat-number {
+    text-shadow: none;
+}
+
+.button {
+    background: var(--foreground-color);
+    border: var(--border-color) 1px solid;
+    box-shadow: none;
+}
+
+.button:hover {
+    background: var(--primary-color-dark);
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+    color: var(--primary-color);
+}
+
+.article-card {
+    background: var(--foreground-color);
+    border: 1px solid var(--border-color);
+}
+
+.article-card:hover {
+    background: var(--primary-color-dark);
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+}
+
+.article-card h3 {
+    color: var(--font-color);
+}
+
+.special-article {
+    box-shadow: none;
+}
+
+.category {
+    color: var(--primary-color);
+    background: var(--primary-color-dark);
+    border: 1px solid transparent;
+}
+
+.category:hover {
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+    background-color: var(--primary-color-dark);
+}
+
+.category-chip {
+    color: var(--primary-color);
+    background: var(--primary-color-dark);
+}
+
+.category-chip:hover {
+    background: var(--primary-color);
+    color: var(--foreground-color);
+    box-shadow: none;
+}
+
+.logo-name {
+    text-shadow: none;
+}
+
+blockquote {
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--foreground-color);
+    color: var(--font-color-dark);
+}
+
+.callout {
+    background: color-mix(in srgb, rgb(var(--callout-color)) 10%, var(--background-color));
+    border-left: 4px solid rgb(var(--callout-color));
+}
+
+.callout-header {
+    background: color-mix(in srgb, rgb(var(--callout-color)) 15%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, rgb(var(--callout-color)) 20%, transparent);
+}
+
+.toc {
+    background: var(--foreground-color);
+    border: 1px solid var(--border-color);
+}
+
+.toc summary::before {
+    color: var(--primary-color);
+}
+
+.toc-h2 > a {
+    color: var(--font-color);
+}
+
+.toc-h2 > a:hover {
+    color: var(--primary-color);
+}
+
+.toc-h3 a {
+    color: var(--font-color-dark);
+}
+
+.toc-h3 a:hover {
+    color: var(--primary-color);
+}
+
+.toc-h4 a {
+    color: var(--font-color-dark);
+}
+
+.toc-h4 a:hover {
+    color: var(--primary-color);
+}
+
+.toc-h5 a {
+    color: var(--font-color-dark);
+}
+
+.toc-h5 a:hover {
+    color: var(--primary-color);
+}
+
+.toc-h6 a {
+    color: var(--font-color-dark);
+}
+
+.toc-h6 a:hover {
+    color: var(--primary-color);
+}
+
+.image-caption {
+    background: color-mix(in srgb, var(--background-color) 75%, transparent);
+    border: 1px solid var(--border-color);
+    color: var(--font-color-dark);
+}
+
+.article-nav {
+    border: 1px solid var(--border-color);
+    background-color: var(--foreground-color);
+}
+
+.article-nav:hover {
+    background-color: var(--primary-color-dark);
+    border: 1px solid var(--primary-color);
+}
+
+.article-nav-previous::before {
+    color: var(--primary-color);
+}
+
+.article-nav-next::before {
+    color: var(--primary-color);
+}
+
+.article-nav-label {
+    color: var(--font-color-dark);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer-content {
+    background: var(--foreground-color);
+    border-top: 2px solid var(--primary-color);
+}
+
+.social-media:hover {
+    color: var(--primary-color);
+}
+
+.social-media:hover svg,
+.social-media:hover svg * {
+    fill: var(--primary-color);
+    stroke: var(--primary-color);
+}
+
+::selection {
+    background: var(--primary-color-dark);
+    color: var(--primary-color);
+}
+
+::-moz-selection {
+    background: var(--primary-color-dark);
+    color: var(--primary-color);
+}
+
+/* Ocultar elementos que no deben aparecer en el PDF */
+.header-content,
+.footer-content,
+.article-navigation,
+.heading-anchor,
+.article-source,
+.pdf-download-btn {
+    display: none !important;
+}
+
+/* Ajustes para impresión */
+.article-banner {
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.author-logo {
+    filter: none;
+}

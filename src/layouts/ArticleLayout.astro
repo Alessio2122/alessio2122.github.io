@@ -1,0 +1,158 @@
+---
+import Layout from './Layout.astro';
+
+interface ArticleData {
+    title: string;
+    description: string;
+    subtitle?: string;
+    author?: string;
+    datetime: string;
+    date?: string;
+    img?: string;
+    category?: string;
+}
+
+interface ArticleRef {
+    id: string;
+    data: ArticleData;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    subtitle?: string;
+    author?: string;
+    datetime: string;
+    img?: string;
+    category: string;
+    slug?: string;
+    prevArticle?: ArticleRef | null;
+    nextArticle?: ArticleRef | null;
+}
+
+const { title, description, subtitle, author, datetime, img, category, slug, prevArticle, nextArticle } = Astro.props as Props;
+
+function toAnchorId(path: string): string {
+  return path.replace(/\//g, '-');
+}
+---
+
+<Layout title={title} description={description} author={author} datetime={datetime} img={img} category={category}>
+    <div class="article">
+        {img && <img src={img} alt="Banner del artículo" class="article-banner" />}
+        <div class="main-content">
+            <div class="category-container">
+                <div><a href={`/articles#${toAnchorId(category)}`} class="category" style={`display: ${!category ? 'none' : 'block'};`}>{category}</a></div>
+            </div>
+            <div class="article-columns">
+                <div class="author-column">
+                    <span class="author"> <img src="/assets/logo.png" alt="Logo de Alessio2122, una A cúbica con colores amarillo, azul, rojo y verde." class="author-logo">
+                    <br>Por: <a href="/about/">{author || "Alessio2122"}</a><hr>Publicado: <time datetime={datetime}>{datetime.split('-').reverse().join('/')}</time></span>
+                    {slug && (
+                        <a href={`/pdfs/${slug}.pdf`} download class="pdf-download-btn" title="Descargar artículo en PDF">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Descargar PDF
+                        </a>
+                    )}
+                </div>
+                <div class="content-column">
+                    <h1 class="article-title"><a href="">{title}</a></h1>
+                    <span class="article-subtitle">{subtitle}</span>
+                    <div class="article-body">
+                        <slot />
+                    </div>
+                    {(prevArticle || nextArticle) && (
+                        <div class="article-navigation">
+                            <div class="article-nav-label">Leer más</div>
+                            <div class="article-nav-grid">
+                                {nextArticle ? (
+                                    <a href={`/articles/${nextArticle.id}`} class="article-card">
+                                        <div class="article-header">
+                                            <span class="category">{nextArticle.data.category || 'General'}</span>
+                                            <time datetime={nextArticle.data.datetime}>{nextArticle.data.date || nextArticle.data.datetime.split('-').reverse().join('/')}</time>
+                                        </div>
+                                        <h3>{nextArticle.data.title}</h3>
+                                        <p class="dynamic-text-container">
+                                            <span class="dynamic-text">{nextArticle.data.description}</span>
+                                        </p>
+                                        <div class="article-author">Por: {nextArticle.data.author || 'Alessio2122'}</div>
+                                    </a>
+                                ) : <div />}
+                                {prevArticle ? (
+                                    <a href={`/articles/${prevArticle.id}`} class="article-card">
+                                        <div class="article-header">
+                                            <span class="category">{prevArticle.data.category || 'General'}</span>
+                                            <time datetime={prevArticle.data.datetime}>{prevArticle.data.date || prevArticle.data.datetime.split('-').reverse().join('/')}</time>
+                                        </div>
+                                        <h3>{prevArticle.data.title}</h3>
+                                        <p class="dynamic-text-container">
+                                            <span class="dynamic-text">{prevArticle.data.description}</span>
+                                        </p>
+                                        <div class="article-author">Por: {prevArticle.data.author || 'Alessio2122'}</div>
+                                    </a>
+                                ) : <div />}
+                            </div>
+                        </div>
+                    )}
+                </div>
+                <div class="empty-column">
+                    <p style="user-select: none; color: transparent;">Si eres capaz de ver este texto, eres el mayor hacker de la historia. Gracias por tu interés.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-toc]').forEach((callout) => {
+    const content = callout.querySelector('.callout-content');
+    if (!content) return;
+
+    const body = callout.closest('.article-body') || callout.parentElement;
+    if (!body) return;
+
+    const headings = body.querySelectorAll('h2, h3, h4, h5, h6');
+    if (headings.length === 0) return;
+
+    const list = document.createElement('ul');
+    list.className = 'toc-list';
+    const tracked = {};
+
+    headings.forEach((heading) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '#' + heading.id;
+      a.textContent = (heading.textContent || '').replace('\u00B6', '').trim();
+      const depth = parseInt(heading.tagName[1]);
+
+      li.appendChild(a);
+
+      Object.keys(tracked).forEach((d) => {
+        if (parseInt(d) >= depth) delete tracked[d];
+      });
+
+      let target = null;
+      for (let d = depth - 1; d >= 2; d--) {
+        if (tracked[d]) { target = tracked[d]; break; }
+      }
+
+      if (target) {
+        let sublist = target.querySelector('.toc-sublist');
+        if (!sublist) {
+          sublist = document.createElement('ul');
+          sublist.className = 'toc-sublist';
+          target.appendChild(sublist);
+        }
+        sublist.appendChild(li);
+      } else {
+        list.appendChild(li);
+      }
+
+      tracked[depth] = li;
+    });
+
+    content.appendChild(list);
+  });
+});
+</script>
+</Layout>

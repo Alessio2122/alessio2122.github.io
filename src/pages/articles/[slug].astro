@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import '../../lib/callout-plugin';
+import '../../lib/heading-anchor-plugin';
+import '../../lib/image-caption-plugin';
+
+export async function getStaticPaths() {
+    const articles = await getCollection('articles');
+    const sorted = articles
+      .filter(a => !a.data.draft)
+      .sort((a, b) => new Date(b.data.datetime).getTime() - new Date(a.data.datetime).getTime());
+
+    return sorted.map((article, index) => ({
+      params: { slug: article.id },
+      props: {
+        article,
+        prevArticle: index < sorted.length - 1 ? sorted[index + 1] : null,
+        nextArticle: index > 0 ? sorted[index - 1] : null,
+      }
+    }));
+}
+
+const { article, prevArticle, nextArticle } = Astro.props;
+const html = await marked.parse(article.body);
+---
+
+<ArticleLayout {...article.data} slug={article.id} prevArticle={prevArticle ? { id: prevArticle.id, data: prevArticle.data } : null} nextArticle={nextArticle ? { id: nextArticle.id, data: nextArticle.data } : null}>
+    <div class="article-body" set:html={html} />
+</ArticleLayout>

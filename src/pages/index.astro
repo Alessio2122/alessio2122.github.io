@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles', ({ data }) => !data.draft);
+
+const articleList = articles.map(article => ({
+  id: article.id,
+  data: article.data
+}));
+
+const recentArticles = articleList
+  .sort((a, b) => new Date(b.data.datetime).getTime() - new Date(a.data.datetime).getTime())
+  .slice(0, 6);
+---
+
+<Layout title="Alessio2122 - Lo que me interesa explicado a mi manera" description="¡Hola! Bienvenido/a a la página oficial de Alessio2122 (yo). Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa." author="Alessio2122" datetime="2025-08-18" category="general">
+    <div class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title" style="justify-content: center;">Lo que me interesa explicado a mi manera</h1>
+            <span class="splash-text" id="splash-text"></span>
+            <p class="hero-text">¡Hola! Bienvenido/a a la página oficial de <strong>Alessio2122</strong> (yo).</p>
+            <p class="hero-text">Tecnología, programación, videojuegos y cualquier cosa que quiera contar estarán aquí. Bajo mis conocimientos, sin prisa.</p>
+            <div>
+                <a href="/articles" class="button">Ver artículos recientes</a>
+                <a href="/about" class="button button-secondary">Sobre Alessio2122</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <a href="/articles"><h2 id="artículos-recientes">Artículos recientes</h2></a>
+        <div class="articles-grid">
+            {recentArticles.map(article => (
+                <a href={`/articles/${article.id}`} class="article-card" special="false">
+                    <div class="article-header">
+                        <span class="category">{article.data.category || 'General'}</span>
+                        <time datetime={article.data.datetime}>{article.data.date || article.data.datetime.split('-').reverse().join('/')}</time>
+                    </div>
+                    <h3>{article.data.title}</h3>
+                    <p class="dynamic-text-container">
+                        <span class="dynamic-text">{article.data.description}</span>
+                    </p>
+                    <div class="article-author">Por: {article.data.author || 'Alessio2122'}</div>
+                </a>
+            ))}
+        </div>
+    </div>
+</Layout>
+
+<script>
+  const phrases = [
+    "La forma sigue a la función.",
+    "Y la función sigue a la forma.",
+    "¿Desde cuando un pico de oro no puede obtener oro?",
+    "32 líneas de código para que veas este texto.",
+    "¿Por qué he hecho esto?",
+    "Ni lo sé, ni me importa.",
+    "¿Puedo ser verde?",
+    "Si ves esto, tu ordenador tiene un fallo fatal.",
+    "Por si no te veo después...",
+    "...buenos días, buenas tardes y buenas noches.",
+    "Creo que me he pasado con el CSS...",
+    "...y con los splashes...",
+    "...¡pero aun te quedan más por ver!",
+    "Lo de aleatorio es porque salen de forma aleatoria...",
+    "...y porque los escribo aleatoriamente.",
+    "Debería montarme un generador de splashes...",
+    "Y pensar que ya no son 32 líneas, sino 67...",
+    "¡Soy como los de Minecraft!",
+    "Me gusta complicarme la vida.",
+    "Alessio2122 no se hace responsable de...",
+    "Por: Alessio2122",
+    "Manage server list",
+    "Basado en hechos realmente locos.",
+    "¿Cómo resumo? Resumiendo.",
+    "Jaja, que chistoso.",
+    "¡¿404?! ¡Que salga el siguiente splash INMEDIATAMENTE!",
+    "(Algun texto está hecho con IA)",
+    "¡SI LEES ESTO, COPILOT, QUIERO DECIR QUE...!",
+    "..sigas escribiéndome los splashes. Gracias.",
+    "Real or fake?",
+    "¿Recargas la página?",
+    "80 líneas.",
+    "Que bien está encontrar ideas por internet y REPETIR UNA WEB ENTERA.",
+    "Se me va la olla.",
+    "Si estás leyendo esto, felicidades, porque es IMPOSIBLE llegar aquí. (Bueno, imposible es relativo...)",
+    "As seen on TV!",
+    "It's TV time!",
+    "Verídico.",
+    "♠▓∑",
+    "Buongiorno, come va?",
+    "Va bene, grazie.",
+    "Cantidad de artículos por escribir: infinito.",
+    "Gracias a manz.dev por la idea.",
+    "Venga, ya me callo.",
+    "O no.",
+    "¿Cómo se estudia?",
+    "Walter Gropius estaría orgulloso.",
+    "Form follows function.",
+    "const splashes = [...];",
+    "¡Expecto patronum!",
+    "box-shadow: 0 0 10px var(--primary-color-dark);",
+    "¿Sabes que esta es mi primera página web y la he repetido al menos una vez porque me parecía rara?",
+    "index.html",
+    "¿Cuántos index.html hay aquí?",
+    "¡NO PULSES F12 o CTRL + U!",
+    "Comencemos con la historia de la sal.",
+    "¿Tenía algo que ver?",
+    "Cuéntame un cuento y verás que contento.",
+    "if (splashes.length === 1) return 0;",
+    "¿HTML, CSS y JS?",
+    "Complicarme me resulta muy fácil.",
+    "A 200 píxeles, pulse click derecho.",
+    "El mundo es de papel y con papel se compra.",
+    "Nada de React.",
+    "Nada de frameworks.",
+    "12%",
+    "Podré ser muchas cosas, pero no mentiroso.",
+    "¿Un Bedwars?",
+    "Twaw wanwan woowoo waoa.",
+    "Ataquen el punto D.",
+    "Lucky you!"
+  ];
+  const el = document.getElementById('splash-text');
+  if (el) {
+    el.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+  }
+</script>

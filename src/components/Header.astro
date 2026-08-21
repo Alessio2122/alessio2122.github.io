@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div class="header-content">
+    <a href="/" class="logo" title="Ir a la página principal.">
+        <div class="logo-container">
+            <Image src="/assets/logo.png" alt="Alessio2122 logo" class="logo-icon" width="48" height="48" loading="lazy"/>
+            <span class="logo-name">Alessio2122</span>
+        </div>
+    </a>
+    <nav>
+        <a href="/articles" class={Astro.url.pathname.startsWith('/articles') ? 'nav-a-active' : ''} title="Ir a la página de artículos">Artículos</a>
+        <a href="/about" class={Astro.url.pathname === '/about' ? 'nav-a-active' : ''} title="Ir a la página sobre mí">Sobre mí</a>
+    </nav>
+</div>
