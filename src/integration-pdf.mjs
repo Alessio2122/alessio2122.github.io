@@ -109,7 +109,10 @@ async function generateAllPdfs(baseUrl, outputDir, slugs) {
     }
 
     const lightCss = getLightCss();
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
 
     for (const slug of slugs) {
         await generatePdfForArticle(browser, baseUrl, slug, outputDir, lightCss);
