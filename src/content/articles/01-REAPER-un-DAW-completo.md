@@ -3,7 +3,7 @@ title: "REAPER, un DAW completo"
 description: "Probando DAW gratuitos. Siempre he querido componer canciones (no sé por qué), pero nunca he sido capaz de encontrar un DAW en condiciones. Pero Reaper, por ahora, es mi DAW preferido, aunque con algunas limitaciones. ¿Qué es un DAW? De forma literal DAW es Digital Audio Workspace o, en español, espacio de trabajo de audio digital. Por tanto, es un programa o varios de ellos que nos permiten generar, editar y manipular audio digital."
 subtitle: "Probando DAW gratuitos"
 author: "Alessio2122"
-datetime: "2026-08-18"
+datetime: "2026-08-21"
 img: "/assets/articles/01-REAPER-un-DAW-completo/01-Banner 1900x432 75.jpg"
 category: "Música/DAW"
 ---
@@ -15,9 +15,9 @@ Siempre he querido componer canciones (no sé por qué), pero nunca he sido capa
 > [!question] ¿Qué es un DAW?
 > De forma literal DAW es Digital Audio Workspace o, en español, espacio de trabajo de audio digital. Por tanto, es un programa o varios de ellos que nos permiten generar, editar y manipular audio digital.
 
-## Mi inexperiencia con [LMMS](https://lmms.io/)
+## Mi inexperiencia con LMMS
 
-Hace mucho tiempo encontré el DAW [LMMS](https://lmms.io/) (Linux MultiMedia Studio), y lo único que componía eran ritmos y melodías con una falta aparente de conocimiento musical (ya que no me di cuenta de que la música que estaba aprendiendo con la guitarra valía, de alguna forma, en otros campos). Un día, la inspiración me llegó y, tras ganar un poco de conocimiento de plugins VST y otros temas que se deberían conocer para utilizar un DAW, compuse una canción (ahora mismo irrelevante), una canción que no denotaba esa falta de conocimiento, algo mejor que todo lo demás. Pero creando esta canción, me percaté de algunas cosas un tanto limitantes:
+Hace mucho tiempo encontré el DAW <a href="https://lmms.io/" target="_blank" rel="noopener noreferrer">LMMS</a> (Linux MultiMedia Studio), y lo único que componía eran ritmos y melodías con una falta aparente de conocimiento musical (ya que no me di cuenta de que la música que estaba aprendiendo con la guitarra valía, de alguna forma, en otros campos). Un día, la inspiración me llegó y, tras ganar un poco de conocimiento de plugins VST y otros temas que se deberían conocer para utilizar un DAW, compuse una canción (ahora mismo irrelevante), una canción que no denotaba esa falta de conocimiento, algo mejor que todo lo demás. Pero creando esta canción, me percaté de algunas cosas un tanto limitantes:
 
 1. **Soporte limitado para plugins**: solo permite utilizar plugins VST y no VST3 u otros.
 2. **Imposibilidad de grabación de audio mediante micrófonos o interfaces de audio**: no se puede grabar audio, aunque sí que se puede introducir mediante varios plugins que vienen con el programa.
@@ -50,13 +50,13 @@ Hace mucho tiempo encontré el DAW [LMMS](https://lmms.io/) (Linux MultiMedia St
 >     - VST3: .vst3.
 >     - Audio Units (AU): .component.
 >
-> Hay algunos problemas de compatibilidad con VST2 Y VST3 de Windows funcionando en Windows, ya que los formatos son distintos. Para solucionar esto podemos usar capas de compatibilidad como [yabridge](https://yabridge.org/).
+> Hay algunos problemas de compatibilidad con VST2 Y VST3 de Windows funcionando en Windows, ya que los formatos son distintos. Para solucionar esto podemos usar capas de compatibilidad como <a href="https://yabridge.org/" target="_blank" rel="noopener noreferrer">yabridge</a>.
 
-Es un buen DAW, de [código abierto](https://github.com/LMMS/lmms) y se puede [descargar](https://lmms.io/download) de forma **gratuita** para la gran mayoría de los sistemas operativos modernos. De hecho, para poder usar VST3, se puede usar [Element](https://kushview.net/element/) o [Carla](https://kx.studio/Applications:Carla), y para grabar se puede grabar el audio en otras aplicaciones y luego importarlo en el DAW.
+Es un buen DAW, de <a href="https://github.com/LMMS/lmms" target="_blank" rel="noopener noreferrer">código abierto</a> y se puede <a href="https://lmms.io/download" target="_blank" rel="noopener noreferrer">descargar</a> de forma **gratuita** para la gran mayoría de los sistemas operativos modernos. De hecho, para poder usar VST3, se puede usar <a href="https://kushview.net/element/" target="_blank" rel="noopener noreferrer">Element</a> o <a href="https://kx.studio/Applications:Carla" target="_blank" rel="noopener noreferrer">Carla</a>, y para grabar se puede grabar el audio en otras aplicaciones y luego importarlo en el DAW.
 
 No tengo muchos problemas con este DAW, pero, como cualquier otro, quise buscar algún que otro programa más para probar, y encontré otro DAW.
 
-## ¿Y [FL Studio](https://www.image-line.com/)?
+## ¿Y FL Studio?
 
 Lo he probado, y está muy bien si pagara... La prueba gratuita me permitió componer una canción que me gustaría recuperar, porque, guardé el archivo y como es una prueba no puedo abrirlo porque solo permite abrir los archivos una vez: la vez que los creas.
 
@@ -64,9 +64,9 @@ Tiene compatibilidad con VST, pero, no pude probarlo lo suficiente... Si quieren
 
 Tras esto, me di cuenta de que no me serviría, y en una búsqueda rápida encontré el siguiente DAW y del que les vengo a hablar.
 
-## [REAPER](https://www.reaper.fm/). Sí, con mayúsculas
+## REAPER. Sí, con mayúsculas
 
-[REAPER](https://www.reaper.fm/), Rapid Environment for Audio Production, Engineering, and Recording (entorno rápido para producción, ingeniería y grabación de audio), es un DAW versátil con compatibilidad con plugins, grabación, edición de sonido, efectos virtuales de fábrica y muchas otras cosas.
+<a href="https://www.reaper.fm/" target="_blank" rel="noopener noreferrer">REAPER</a>, Rapid Environment for Audio Production, Engineering, and Recording (entorno rápido para producción, ingeniería y grabación de audio), es un DAW versátil con compatibilidad con plugins, grabación, edición de sonido, efectos virtuales de fábrica y muchas otras cosas.
 
 La pregunta que todos tendrán es si es de pago, y la respuesta es más compleja: REAPER es un DAW que cuesta dinero, pero existe una versión de prueba oficial y completamente funcional durante 60 días sin registro ni datos personales, pero, tras haberlo probado más de 60 días, no pide una suscripción ni un pago, simplemente, sale la ventana de esperar 5 segundos para que se piensen si comprarlo. Por tanto, es completamente gratuito durante un tiempo indefinido, aunque, es recomendable que, si le han dado bastante uso y es indispensable para ustedes, lo paguen.
 
@@ -75,12 +75,12 @@ La pregunta que todos tendrán es si es de pago, y la respuesta es más compleja
 
 ### Instalación
 
-1. Descargue el instalador de su sistema operativo en [REAPER | Download](https://www.reaper.fm/download.php).
+1. Descargue el instalador de su sistema operativo en <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer">REAPER | Download</a>.
 2. Ejecute el instalador descargado. En Linux está dentro de una carpeta comprimida que deberá descomprimir. Para ejecutarlo en Linux deberá abrirlo desde el terminal usando el comando `sh install-reaper.sh` dentro de la carpeta descomprimida.
 3. Siga los pasos de la instalación y espere hasta que se complete.
 4. Ejecute el programa instalado.
 
-> [!mas] REAPER nos proporciona en su página web una [guía de usuario](https://dlz.reaper.fm/userguide/ReaperUserGuide779a.pdf) completa que indica con precisión todos los pasos a realizar.
+> [!mas] REAPER nos proporciona en su página web una <a href="https://dlz.reaper.fm/userguide/ReaperUserGuide779a.pdf" target="_blank" rel="noopener noreferrer">guía de usuario</a> completa que indica con precisión todos los pasos a realizar.
 
 ### Abriendo el programa
 
@@ -122,9 +122,9 @@ Por ahora, en este DAW he encontrado algunos problemas que, en cuanto me he pues
 
 #### Los plugins de DAW que instalé
 
-Otro de los problemas es que algunas de las configuraciones de los plugins no se guardaban de una sesión a otra, por ello, instalé [SWS/S&M](https://sws-extension.org/). Este plugin de DAW da algunas opciones que el programa no nos da por defecto. En el apartado de `Extensions`, en el subapartado de `SWS/S&M` y en el segundo subapartado de `Snapshots` podremos crear versiones completas de nuestro proyecto incluyendo todas las configuraciones de plugins, sonidos, MIDI y efectos que tengamos puestos al crear la versión.
+Otro de los problemas es que algunas de las configuraciones de los plugins no se guardaban de una sesión a otra, por ello, instalé <a href="https://sws-extension.org/" target="_blank" rel="noopener noreferrer">SWS/S&M</a>. Este plugin de DAW da algunas opciones que el programa no nos da por defecto. En el apartado de `Extensions`, en el subapartado de `SWS/S&M` y en el segundo subapartado de `Snapshots` podremos crear versiones completas de nuestro proyecto incluyendo todas las configuraciones de plugins, sonidos, MIDI y efectos que tengamos puestos al crear la versión.
 
-Seguro que se habrá fijado de que el único idioma de este programa es el inglés, por ello, descargué e instalé un [paquete de traducciones hecho por Javier Robledo](https://www.reaperespa.com/descargar-reaper-en-espanol/) que ha traducido completamente el DAW. Para instalarlo, hay que abrir el archivo `.ReaperLangPack` con REAPER y se instalará. Tras reiniciar el programa se traducirá **todo** al español.
+Seguro que se habrá fijado de que el único idioma de este programa es el inglés, por ello, descargué e instalé un <a href="https://www.reaperespa.com/descargar-reaper-en-espanol/" target="_blank" rel="noopener noreferrer">paquete de traducciones hecho por Javier Robledo</a> que ha traducido completamente el DAW. Para instalarlo, hay que abrir el archivo `.ReaperLangPack` con REAPER y se instalará. Tras reiniciar el programa se traducirá **todo** al español.
 
 ## Conclusión
 

@@ -3,8 +3,8 @@ title: "Cómo entrar a un servidor de Minecraft desde consola"
 description: "Dos metodos verificados en una consola Nintendo Switch. Aviso Alessio2122 no se hace responsable de lo que pueda ocurrir a tu consola si ejecutas mal los pasos. Sigue la guía a tu propio riesgo. Se recomienda leer el texto varias veces antes de ponerse a ello. Introducción Creo que todos sabemos el dolor de cabeza que es intentar entrar a un servidor de Minecraft desde cualquier consola. Para los que no lo sepan, las consolas tienen una versión de Minecraft Bedrock, que a diferencia de Minecraft Java o Minecraft Bedrock para ordenadores y dispositivos móviles, no nos permite añadir servidores que no sean los predeterminados, los aprobados por Mojang. Por esto, esta guía incluye dos de los mejores métodos para conectarse a un servidor y que podáis jugar con vuestros amigos (o solos) sin perder la cabeza en el intento."
 subtitle: "Dos metodos verificados en una consola Nintendo Switch."
 author: "Alessio2122"
-datetime: "2026-08-26"
-img: "/assets/articles/01-Como-entrar-a-un-servidor/01-Banner 1900x342 75.jpg"
+datetime: "2026-08-22"
+img: "/assets/articles/02-Como-entrar-a-un-servidor/02-Banner 1900x342 75.jpg"
 category: "Minecraft"
 ---
 
@@ -40,8 +40,8 @@ Ahora tiene el Realms en tu lista. Pulse en él y entre dándole a «Jugar». Pu
 
 Ya que está dentro, la primera vez le preguntara de qué consola es. Deberá elegir correctamente la suya. En la parte izquierda del punto en que apareció su personaje, debe aparecer un _NPC_ que tiene encima un texto como «Join any server», como este:
 
-![Un personaje no jugable (NPC) dentro de Minecraft con un cartel encima que dice Join any server. Lleva una ropa de pirata y pelo rosa.](/assets/articles/01-Como-entrar-a-un-servidor/01-NPC.png)
-> NPC al que debe hablar.
+![Un personaje no jugable (NPC) dentro de Minecraft con un cartel encima que dice Join any server. Lleva una ropa de pirata y pelo rosa.](/assets/articles/02-Como-entrar-a-un-servidor/02-NPC.png)
+> NPC al que debe hablar
 
 Pulse el botón de construir sobre él y aparecerá un menú. Para añadir un servidor debe darle a «Add New Server». Allí escriba la IP y el puerto (port), en cada uno de los campos. Cuando lo tenga, pulse «Enviar». Finalmente, seleccione el servidor que acaba de añadir y... Oh, claro, anuncios...
 
@@ -49,7 +49,7 @@ Cada vez que salga un anuncio, espere a que suene un sonido de experiencia y pul
 
 ### Opinión
 
-Es impresionante que solo usando un Realms gratis podamos entrar a cualquier servidor configurado para que puedan entrar jugadores de Bedrock. Hay tantos anuncios porque mantener un servidor en línea no es gratis. Este Realms ha sido creado por [OniionCraft](https://oniioncraft.com/bedrockserverhub).
+Es impresionante que solo usando un Realms gratis podamos entrar a cualquier servidor configurado para que puedan entrar jugadores de Bedrock. Hay tantos anuncios porque mantener un servidor en línea no es gratis. Este Realms ha sido creado por <a href="https://oniioncraft.com/bedrockserverhub" target="_blank" rel="noopener noreferrer">OniionCraft</a>.
 
 ## Método 2. Utilizar Bedrock Connect (cambiar las DNS)
 
@@ -72,14 +72,13 @@ Cada consola tiene su sistema, pero estos son los pasos comunes en casi todas:
 
 Ahora, con las DNS cambiadas vaya a «Jugar» y «Servidores». Entre en cualquiera de ellos, porque dentro de cada uno saldrá una interfaz como esta:
 
-![](/assets/articles/01-Como-entrar-a-un-servidor/01-Interfaz.png)
-> Una interfaz dentro de Minecraft Bedrock con el título Bedrock Connect y varias opciones para gestionar servidores.
+![Una interfaz dentro de Minecraft Bedrock con el título Bedrock Connect y varias opciones para gestionar servidores](/assets/articles/02-Como-entrar-a-un-servidor/02-Interfaz.png)
 
 Entre en «Manage Server List» y después en «Add Server». Póngale el nombre que quieras, la IP y el puerto (port), active el selector de «Add to server list», pulsa «Enviar». Ya está el servidor en la lista de Bedrock Connect, no de Minecraft. Para entrar solo pulse el servidor y ya estárá en tu servidor. Ahora cada vez que quiera jugar, deberá poner las DNS anteriores, entrar en cualquier servidor y seleccionar el que ha creado.
 
 ### Opinión
 
-Es muy interesante que se pueda llegar a su servidor con solo cambiar unos números. Les recomiendo cambiar las DNS a automático cada vez que no vaya a jugar a Minecraft o a esos servidores, simplemente por seguridad. Este servicio es mantenido por [Bedrock Connect](https://github.com/Pugmatt/BedrockConnect).
+Es muy interesante que se pueda llegar a su servidor con solo cambiar unos números. Les recomiendo cambiar las DNS a automático cada vez que no vaya a jugar a Minecraft o a esos servidores, simplemente por seguridad. Este servicio es mantenido por <a href="https://github.com/Pugmatt/BedrockConnect" target="_blank" rel="noopener noreferrer">Bedrock Connect</a>.
 
 ## Conclusión
 

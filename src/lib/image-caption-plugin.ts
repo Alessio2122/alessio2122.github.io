@@ -15,7 +15,7 @@ const imageCaptionExtension: marked.TokenizerExtension & marked.RendererExtensio
     return src.match(/!\[.*?\]\(.*?\)\n>/)?.index ?? -1;
   },
   tokenizer(this: marked.Tokenizer, src: string): ImageCaptionToken | undefined {
-    const rule = /^!\[([^\]]*)\]\(([^)]+)\)\n((?:>[^\n]+\n?)*)/;
+    const rule = /^!\[([^\]]*)\]\(([^)]+)\)\n((?:>[^\n]+\n?)+)/;
     const match = rule.exec(src);
     if (match) {
       const imgAlt = match[1];

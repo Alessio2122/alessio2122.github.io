@@ -9,8 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@lucide/astro": "^1.33.0",
     "astro": "^7.2.3",
     "gray-matter": "^4.0.3",
+    "lucide": "^1.33.0",
     "marked": "^18.0.5",
     "puppeteer": "^25.8.0"
   }

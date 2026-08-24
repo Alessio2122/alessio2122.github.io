@@ -548,12 +548,17 @@ nav a:hover {
     font-weight: bold;
     letter-spacing: .1em;
     border: 1px solid transparent;
+    text-align: center;
 }
 
 .category:hover {
     border: 1px solid var(--primary-color);
     box-shadow: 0 0 10px var(--primary-color-dark);
     background-color: var(--primary-color-dark);
+}
+
+.article-header .category {
+    margin-right: 1rem;
 }
 
 .article-author {
@@ -1149,6 +1154,23 @@ details.callout[open] > summary.callout-header::before {
     .article-columns:first-child {
         flex: 1;
     }
+
+    .empty-column {
+        display: none;
+    }
+
+    .author-column, .empty-column {
+        width: 100%;
+        text-align: center;
+        display: block;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: nowrap;
+    }
+
+    .author {
+        margin-top: 1rem;
+    }
 }
 
 /*=====================*/
@@ -1165,21 +1187,17 @@ details.callout[open] > summary.callout-header::before {
         min-height: 180px;
     }
 
-    .article-card h3 {
-        font-size: .95rem;
-    }
-
-    .article-header {
-        flex-direction: column;
-        gap: .25rem;
-    }
-
     .article-columns {
         flex-direction: column;
     }
 
     .author-column, .empty-column {
         width: 100%;
+        text-align: center;
+        display: block;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: nowrap;
     }
 
     .content-column {
@@ -1187,11 +1205,7 @@ details.callout[open] > summary.callout-header::before {
     }
 
     .author {
-        text-align: left;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
+        margin-top: 1rem;
     }
 
     .author-logo {
@@ -1235,6 +1249,10 @@ details.callout[open] > summary.callout-header::before {
 
     .big-container {
         margin-top: 2rem;
+    }
+
+    .empty-column {
+        display: none;
     }
 }
 
@@ -1294,5 +1312,9 @@ details.callout[open] > summary.callout-header::before {
 
     .callout-content {
         font-size: .85rem;
+    }
+
+    .empty-column {
+        display: none;
     }
 }
