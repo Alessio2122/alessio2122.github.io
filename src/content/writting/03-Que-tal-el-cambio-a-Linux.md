@@ -44,19 +44,17 @@ Para usar el terminal tendremos que entrar a la aplicación de terminal del gest
 
 Para usar un gestor gráfico, debemos instalarlo con el terminal, y en las webs de estos gestores tenemos el comando de instalación. Yo utilizo <a href="https://www.seafoam-labs.org/shelly-alpm/" target="_blank" rel="noopener noreferrer">Shelly</a>, aunque existen otras opciones como <a href="https://calamares.codeberg.page/" target="_blank" rel="noopener noreferrer">Calamares</a> o <a href="https://wiki.manjaro.org/index.php?title=Pamac" target="_blank" rel="noopener noreferrer">Pamac</a>.
 
-En Arch podemos instalar paquetes desde distintos repositorios (lugares donde se guardan los paquetes):
+En Arch podemos instalar paquetes desde distintos repositorios (lugares donde se guardan los paquetes para que nosotros los descarguemos) con distintos formatos:
 
-- Pacman.
-- AUR.
+- Pacman: incluyendo los paquetes de <a href="https://archlinux.org/packages/" target="_blank" rel="noopener noreferrer">Arch</a> y los de <a href="https://packages.cachyos.org/" target="_blank" rel="noopener noreferrer">CachyOS</a>.
+- AUR: en el repositorio de <a href="https://aur.archlinux.org/" target="_blank" rel="noopener noreferrer">Arch</a> (estos paquetes han sido creados por usuarios y el uso de los archivos está a su propio riesgo).
 
 Y en la gran mayoría de distribuciones tenemos:
 
-- Flatpak.
-- Snap.
+- Flatpak: en el repositorio de <a href="https://flathub.org/es" target="_blank" rel="noopener noreferrer">Flathub</a>.
+- Snapcraft: en el repositorio de <a href="https://snapcraft.io/" target="_blank" rel="noopener noreferrer">Snapcraft</a>.  
 
 Además, tenemos AppImages, que son programas de Linux que funcionan en cualquier distribución.
-
-Entonces, ya podemos instalar paquetes. ¿Qué más?
 
 > [!rehacer] Actualizando paquetes
 > CachyOS trae una aplicación llamada Cachy-Update que al abrirlo actualizará los paquetes con solo tener que poner las letras `s`, `n`, su contraseña y el intro (para introducir las letras o su contraseña en el programa). Al final, pedirá si reiniciar el ordenador o no.
@@ -64,12 +62,10 @@ Entonces, ya podemos instalar paquetes. ¿Qué más?
 > Este programa ejecuta los comandos de actualización de `pacman`, los paquetes AUR y muchos otros en un solo lugar para tener todo a punto.
 > Conviene revisar esto todos los días, ya que, los paquetes de Linux suelen actualizarse muy a menudo (hay días que salen cientos).
 
+Entonces, ya podemos instalar paquetes. ¿Qué más?
+
 ## Gestionando archivos
 
 Como en los paquetes, podemos usar el terminal o un gestor gráfico. ¿No ve un patrón? Eso es porque Linux se basa en el terminal, y los gestores gráficos solo hacen más sencillas las tareas, porque, tristemente, mucha gente no conoce (ni quiere aprender) estos comandos de consola.
 
 En KDE Plasma podemos usar Dolphin para gestionar nuestros archivos, aunque yo instalé <a href="https://doublecmd.sourceforge.io/" target="_blank" rel="noopener noreferrer">Double Commander</a> porque estoy acostumbrado al programa <a href="https://www.ghisler.com/" target="_blank" rel="noopener noreferrer">Total Commander</a> de Windows.
-
-## Los paquetes que tuve que instalar para que CachyOS funcione óptimamente (para mí)
-
-Obviamente, a CachyOS le falta un poco para instalarlo y funcionar sin nada más, por ello, tuve que descargar algunas cosas:
