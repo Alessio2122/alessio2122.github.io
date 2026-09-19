@@ -1298,6 +1298,11 @@ details.callout[open] > summary.callout-header::before {
     transition: all .2s ease-out;
     cursor: pointer;
     padding: 0;
+    margin-right: .5rem;
+}
+
+.share-btn:last-child {
+    margin-right: 0;
 }
 
 .share-btn:hover {
