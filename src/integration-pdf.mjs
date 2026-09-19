@@ -77,6 +77,7 @@ async function generatePdfForArticle(browser, baseUrl, slug, outputDir, lightCss
             hide('.footer-content');
             hide('.article-navigation');
             hide('.pdf-download-btn');
+            hide('.share-buttons');
             document.querySelectorAll('.heading-anchor').forEach(a => a.style.display = 'none');
         });
 

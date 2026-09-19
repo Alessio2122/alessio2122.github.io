@@ -1,14 +1,14 @@
 ---
 title: "¿Qué tal el cambio a Linux?"
-description: "Realmente, mejor. Desde que he tenido un ordenador, comencé con un Linux, siempre. Supongo que era porque el ordenador no aceptaba un Windows, o explotaría. Ese Linux fue un Lubuntu, y para lo que lo usaba, iba genial. Después de tener otro ordenador, instalamos un Linux Mint, y otra vez, iba genial, pero... Me pase a Windows (dejando la mitad de mi ordenador en Linux), y, aunque funcionaba bastante bien, después de unos años, acabé harto. Quizás por la inexistencia de soporte que sufrirá el Windows 10 en unos años o quizás porque iba muy lento, después de usar Windows 11 un año en mi último ordenador, busqué una distribución de Linux que encajara conmigo, y encontré una muy curiosa."
+description: "Realmente, mejor. Desde que he tenido un ordenador, comencé con un Linux, siempre. Supongo que era porque el ordenador no aceptaba un Windows, o explotaría. Ese Linux fue un Lubuntu, y para lo que lo usaba, iba genial. Después de tener otro ordenador, instalamos un Linux Mint, y otra vez, iba genial, pero... Me pasé a Windows (dejando la mitad de mi ordenador en Linux), y, aunque funcionaba bastante bien, después de unos años, acabé harto. Quizás por la inexistencia de soporte que sufrirá el Windows 10 en unos años o quizás porque iba muy lento, después de usar Windows 11 un año en mi último ordenador, busqué una distribución de Linux que encajara conmigo, y encontré una muy curiosa."
 subtitle: "Realmente, mejor"
 author: "Alessio2122"
 datetime: "2026-08-23"
-img: "/assets/articles/03-Que-tal-el-cambio-a-Linux/03-Banner 1900x432 75.jpg"
+img: "/assets/articles/03-Que-tal-el-cambio-a-Linux/03-Banner 1900x342 75.jpg"
 category: "Programación/Sistemas operativos"
 ---
 
-Desde que he tenido un ordenador, comencé con un Linux, siempre. Supongo que era porque el ordenador no aceptaba un Windows, o explotaría. Ese Linux fue un  <a href="https://lubuntu.me/" target="_blank" rel="noopener noreferrer">Lubuntu</a>, y para lo que lo usaba, iba genial. Después de tener otro ordenador, instalamos un <a href="https://linuxmint.com/" target="_blank" rel="noopener noreferrer">Linux Mint</a>, y otra vez, iba genial, pero... Me pase a Windows (dejando la mitad de mi ordenador en Linux), y, aunque funcionaba bastante bien, después de unos años, acabé harto. Quizás por la inexistencia de soporte que sufrirá el Windows 10 en unos años o quizás porque iba muy lento, después de usar Windows 11 un año en mi último ordenador, busqué una distribución de Linux que encajara conmigo, y encontré una muy curiosa.
+Desde que he tenido un ordenador, comencé con un Linux, siempre. Supongo que era porque el ordenador no aceptaba un Windows, o explotaría. Ese Linux fue un  <a href="https://lubuntu.me/" target="_blank" rel="noopener noreferrer">Lubuntu</a>, y para lo que lo usaba, iba genial. Después de tener otro ordenador, instalamos un <a href="https://linuxmint.com/" target="_blank" rel="noopener noreferrer">Linux Mint</a>, y otra vez, iba genial, pero... Me pasé a Windows (dejando la mitad de mi ordenador en Linux), y, aunque funcionaba bastante bien, después de unos años, acabé harto. Quizás por la inexistencia de soporte que sufrirá el Windows 10 en unos años o quizás porque iba muy lento, después de usar Windows 11 un año en mi último ordenador, busqué una distribución de Linux que encajara conmigo, y encontré una muy curiosa.
 
 > [!article-content]- Contenido del artículo
 
@@ -69,3 +69,9 @@ Entonces, ya podemos instalar paquetes. ¿Qué más?
 Como en los paquetes, podemos usar el terminal o un gestor gráfico. ¿No ve un patrón? Eso es porque Linux se basa en el terminal, y los gestores gráficos solo hacen más sencillas las tareas, porque, tristemente, mucha gente no conoce (ni quiere aprender) estos comandos de consola.
 
 En KDE Plasma podemos usar Dolphin para gestionar nuestros archivos, aunque yo instalé <a href="https://doublecmd.sourceforge.io/" target="_blank" rel="noopener noreferrer">Double Commander</a> porque estoy acostumbrado al programa <a href="https://www.ghisler.com/" target="_blank" rel="noopener noreferrer">Total Commander</a> de Windows.
+
+## Conclusión
+
+Los últimos Linux que están saliendo están obteniendo unos niveles de rendimiento y de usabilidad iguales e incluso mejores que Windows, por tanto, podemos confirmar que Linux es una grandísima opción para quienes buscan algo distinto a Windows.
+
+No hemos entrado a hablar de que CachyOS está optimizado para videojuegos también y hace uso de las tarjetas gráficas, pero es un tema muy interesante del que podríamos profundizar en el futuro.

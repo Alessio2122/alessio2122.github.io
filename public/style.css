@@ -1256,6 +1256,153 @@ details.callout[open] > summary.callout-header::before {
     }
 }
 
+/*=====================*/
+/* Share buttons       */
+/*=====================*/
+
+.share-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 2.5rem;
+    padding: .75rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.share-label {
+    font-size: .85rem;
+    font-weight: bold;
+    color: var(--font-color-dark);
+    margin-right: .25rem;
+}
+
+.share-buttons-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: var(--foreground-color);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    text-decoration: none;
+    transition: all .2s ease-out;
+    cursor: pointer;
+    padding: 0;
+}
+
+.share-btn:hover {
+    background: var(--primary-color-dark);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.share-btn svg {
+    flex-shrink: 0;
+}
+
+.share-feedback {
+    font-size: .8rem;
+    color: var(--font-color-dark);
+    font-style: italic;
+}
+
+/* Diálogo de selección de instancia de Mastodon */
+
+.mastodon-dialog {
+    border: 1px solid var(--border-color);
+    background: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    padding: 1.25rem;
+    max-width: min(24rem, 90vw);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--primary-color) 35%, transparent);
+}
+
+.mastodon-dialog::backdrop {
+    background: rgba(0, 0, 0, .6);
+}
+
+.mastodon-title {
+    margin: 0 0 .75rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.mastodon-field {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    font-size: .85rem;
+}
+
+.mastodon-input {
+    background: var(--foreground-color);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    padding: .5rem .6rem;
+}
+
+.mastodon-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.mastodon-input-invalid {
+    border-color: #d53939;
+}
+
+.mastodon-hint {
+    color: var(--font-color-dark);
+    font-size: .72rem;
+}
+
+.mastodon-error {
+    color: #d53939;
+    font-size: .75rem;
+    min-height: 1rem;
+}
+
+.mastodon-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    margin-top: .75rem;
+}
+
+.mastodon-actions button {
+    padding: .45rem .9rem;
+    background: var(--foreground-color);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    font-size: .85rem;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.mastodon-actions button:hover {
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.mastodon-confirm:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
 @media (max-width: 480px) {
     h1 {
         font-size: clamp(1.25rem, 6vw, 1.75rem);
